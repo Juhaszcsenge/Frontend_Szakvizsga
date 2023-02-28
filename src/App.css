@@ -1,0 +1,16 @@
+
+html, body{
+    background-color: black;
+}
+
+:root {
+    --bs-body-bg: black;
+    --bs-body-color: white;
+}
+
+* {
+    color: white;
+}
+Footer{
+    margin-top: auto;
+}
