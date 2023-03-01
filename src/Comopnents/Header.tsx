@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default class  Header extends Component {
     render(){
@@ -19,6 +20,8 @@ export default class  Header extends Component {
                   </NavDropdown>
                 </Nav>
               </Navbar.Collapse>
+              <Link className='btn tbn-success grow'style={{marginRight:'7px'}} to='/login'>Bejelenkezés</Link>
+              <Link className='btn btn-success grow' to='/register'>Regisztrálás</Link>
             </Navbar>
           );
     }
