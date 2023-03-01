@@ -3,9 +3,13 @@ import React, {Component} from "react";
 export default  class Singup extends Component {
     render() {
         return(
-            <div>
+            <form>
                 <h1>Sing up</h1>
-            </div>
+                <div>
+                    <lable>First</lable>
+                </div>
+            </form>
+            
         )
     }
 }
