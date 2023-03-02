@@ -7,7 +7,7 @@ export default class  Login extends Component {
             <form>
             <h1>Sing in</h1>
             <div className="mb-3">
-                <label>Eamil address</label>
+                <label>Email cím</label>
                 <input 
                 type="email"
                 className="form-control"
@@ -15,7 +15,7 @@ export default class  Login extends Component {
                 />
             </div>
             <div className="mb-3">
-                <label>Password</label>
+                <label>Jelszó</label>
                 <input 
                 type="password"
                 className="form-control"
@@ -25,15 +25,15 @@ export default class  Login extends Component {
                 <div className="mb-3">
                     <div className="custom-control-input"
                     id="customCheck1" />
-                    <label className="custom-control-label" htmlFor="costumCheck1">
-                        Remember me
+                    <label className="custom-control-label" htmlFor="costumCheck1" style={{color:' rgb(228, 56, 228)'}}>
+                        Emlékez rám
                     </label>
                 </div>
                 <div className="d-grid">
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" style={{backgroundColor:'black', color:' rgb(228, 56, 228)'}}>Submit</button>
                 </div>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
+                <p className="forgot-password text-right" style={{color:'rgb(228, 56, 228)'}}>
+                    Elfelejett <a href="#">jelszó?</a>
                 </p>
                     
         </form>

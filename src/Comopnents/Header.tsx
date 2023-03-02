@@ -6,7 +6,7 @@ import Singup from '../Pages/Singup';
 export default class  Header extends Component {
     render(){
         return (
-            <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
+            <Navbar bg="dark-p3" variant='dark' expand="lg" collapseOnSelect>
               <Navbar.Brand href="#home">Burgnyik</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -21,8 +21,8 @@ export default class  Header extends Component {
                   </NavDropdown>
                 </Nav>
               </Navbar.Collapse>
-              <Link className='btn tbn-success grow'style={{marginRight:'7px'}} to='/Login'>Bejelenkezés</Link>
-              <Link className='btn btn-success grow' to={'/register'} >Regisztrálás</Link>
+              <Link className='btn 'style={{marginRight:'7px', color:'rgb(228, 56, 228)'}} to='/Login'>Bejelentkezés</Link>
+              <Link className='btn ' style={{color:'rgb(228, 56, 228)'}}  to='/register'>Regisztrálás</Link>
 
             </Navbar>
             

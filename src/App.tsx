@@ -11,6 +11,7 @@ import './App.css';
 import Login from './Pages/Login';
 import Singup from './Pages/Singup';
 import LoginHome from './Pages/LoginHome';
+import Fooldal from './Pages/Fooldal';
 
 
 
@@ -22,7 +23,7 @@ import LoginHome from './Pages/LoginHome';
       <Header />
       <main>
         <Container >
-          <h1>valami</h1> 
+         
 
           
           <Routes>

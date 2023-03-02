@@ -4,9 +4,9 @@ export default  class Singup extends Component {
     render() {
         return(
             <form>
-            <h3>Sign Up</h3>
+            <h3 style={{margin:'top'}}>Sign Up</h3>
             <div className="mb-3">
-              <label>First name</label>
+              <label>Vezeték név</label>
               <input
                 type="text"
                 className="form-control"
@@ -14,11 +14,11 @@ export default  class Singup extends Component {
               />
             </div>
             <div className="mb-3">
-              <label>Last name</label>
-              <input type="text" className="form-control" placeholder="Last name" />
+              <label>Kereszt név</label>
+              <input type="text" className="form-control" placeholder="Second name" />
             </div>
             <div className="mb-3">
-              <label>Email address</label>
+              <label>Email cím</label>
               <input
                 type="email"
                 className="form-control"
@@ -26,7 +26,7 @@ export default  class Singup extends Component {
               />
             </div>
             <div className="mb-3">
-              <label>Password</label>
+              <label>Jelszó</label>
               <input
                 type="password"
                 className="form-control"
@@ -35,11 +35,11 @@ export default  class Singup extends Component {
             </div>
             <div className="d-grid">
               <button type="submit" className="btn btn-primary">
-                Sign Up
+                Regisztráció
               </button>
             </div>
             <p className="forgot-password text-right">
-              Already registered <a href="/sign-in">sign in?</a>
+              Már regisztrált <a href="/sign-in">bejelentkezik?</a>
             </p>
           </form>
            
