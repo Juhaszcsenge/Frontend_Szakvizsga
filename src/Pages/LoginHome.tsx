@@ -27,12 +27,7 @@ function LoginHome() {
             </div>
           </nav>
           <div className="auth-wrapper">
-            <div className="auth-inner">
-              <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/sing-in" element={<Login />} />
-                <Route path="/sing-up" element={<Login />} />
-              </Routes>
+            <div className="auth-inner"> 
             </div>
           </div>
         </div>

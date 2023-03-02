@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
+import Singup from '../Pages/Singup';
 
 export default class  Header extends Component {
     render(){
@@ -20,10 +21,13 @@ export default class  Header extends Component {
                   </NavDropdown>
                 </Nav>
               </Navbar.Collapse>
-              <Link className='btn tbn-success grow'style={{marginRight:'7px'}} to='/login'>Bejelenkezés</Link>
-              <Link className='btn btn-success grow' to='/register'>Regisztrálás</Link>
+              <Link className='btn tbn-success grow'style={{marginRight:'7px'}} to='/Login'>Bejelenkezés</Link>
+              <Link className='btn btn-success grow' to={'/register'} >Regisztrálás</Link>
+
             </Navbar>
+            
           );
     }
   
+
 }

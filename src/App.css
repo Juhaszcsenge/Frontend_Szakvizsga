@@ -10,15 +10,6 @@ html, body{
 * {
     color: white;
 }
-.MDBFooter{
-    left:0;
-    bottom: 0;
-
-}
-.FormPage footer{
-    position: fixed;
-    bottom: 0;
-}
 .forgot-password,
 .forgot-password a {
     text-align: right;
@@ -29,7 +20,4 @@ html, body{
 }
 .forgot-password a{
     color:rgb(228, 56, 228)
-}
-.form-control{
-
 }

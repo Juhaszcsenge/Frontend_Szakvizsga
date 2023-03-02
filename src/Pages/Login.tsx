@@ -4,7 +4,6 @@ import { Link, Route, Router, Routes } from "react-router-dom";
 export default class  Login extends Component {
     render() {
         return(
-            
             <form>
             <h1>Sing in</h1>
             <div className="mb-3">
