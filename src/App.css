@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@1,300&display=swap');
+
 html, body{
     background-color: black;
+    font-family: 'Shantell Sans', cursive;
 }
 
 :root {

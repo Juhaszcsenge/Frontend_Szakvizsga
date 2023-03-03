@@ -12,14 +12,14 @@ import Login from './Pages/Login';
 import Singup from './Pages/Singup';
 import LoginHome from './Pages/LoginHome';
 import Fooldal from './Pages/Fooldal';
-
-
+import Images from './Images/sajtburger.jpg'
 
   class App extends React.Component{
 
     render() {
     return  <div>
       <>
+      
       <Header />
       <main>
         <Container >
@@ -33,6 +33,10 @@ import Fooldal from './Pages/Fooldal';
         </Container>
       </main>
       <Footer />
+      <Fooldal />
+     
+      
+     
       </>
       
     </div>
