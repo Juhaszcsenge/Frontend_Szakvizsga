@@ -11,7 +11,7 @@ import {
    export default class Footer extends Component{
     render(){
         return (
-            <MDBFooter className='bg-dark-p3 text-center text-white' style={{backgroundColor: 'black', position:'absolute', left: '0', bottom: '0', right: '0'}}>
+            <MDBFooter className='bg-dark-p3 text-center text-white' style={{backgroundColor: 'black'}}>
             <MDBContainer className='p-4 pb-0'>
               <section className='mb-4'>
                 <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>

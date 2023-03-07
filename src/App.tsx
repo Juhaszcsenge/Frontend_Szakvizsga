@@ -14,6 +14,8 @@ import LoginHome from './Pages/LoginHome';
 import Fooldal from './Pages/Fooldal';
 import Images from './Images/sajtburger.jpg'
 
+
+
   class App extends React.Component{
 
     render() {
@@ -32,11 +34,11 @@ import Images from './Images/sajtburger.jpg'
               </Routes>  
         </Container>
       </main>
-      <Footer />
+
       <Fooldal />
      
       
-     
+      <Footer />
       </>
       
     </div>
