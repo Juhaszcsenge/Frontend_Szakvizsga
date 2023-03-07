@@ -1,34 +1,56 @@
-import React, {Component} from "react";
-import {
-    MDBCarousel,
-    MDBCarouselItem,
-  } from 'mdb-react-ui-kit';
-  
+import React from 'react';
+import { Carousel, Container } from 'react-bootstrap';
 
 
-export default class Fooldal extends Component {
-    render(){
-        return (
-            <MDBCarousel showControls showIndicators>
-            <MDBCarouselItem
-              className='w-100 h-20 jutify-content-between d-flex align-items-center slider_wrapper '
-              itemId={1}
-              src='https://mdbootstrap.com/img/new/slides/041.jpg'
-              alt='...'
-            />
-            <MDBCarouselItem
-              className='w-100 h-20 jutify-content-between d-flex align-items-center slider_wrapper'
-              itemId={2}
-              src='https://mdbootstrap.com/img/new/slides/042.jpg'
-              alt='...'
-            />
-            <MDBCarouselItem
-              className='w-100 h-20 jutify-content-between d-flex align-items-center slider_wrapper'
-              itemId={3}
-              src='https://mdbootstrap.com/img/new/slides/043.jpg'
-              alt='...'
-            />
-          </MDBCarousel>
-        ) 
-    }
-}
+const MyCarousel: React.FC = () => {
+  return (
+    <section id="etterem" className='etterem-block'>
+        <Container style={{display: 'block', width:"700", padding:"30"}} >
+        <div className='title-holder'>
+        </div>
+        <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 h-400"
+          style={{width:"1000px", height:"500px"}}
+          src="./imag01.jpg"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 h-400"
+          style={{width:"1000px", height:"500px"}}
+          src="./páros menü.jpg"
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 h-400"
+          style={{width:"1000px", height:"500px"}}
+          src="sajtburger.jpg"
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+       </Container>
+    </section>
+  );
+};
+
+export default MyCarousel;

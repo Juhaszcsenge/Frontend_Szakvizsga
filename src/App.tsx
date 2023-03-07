@@ -14,6 +14,8 @@ import LoginHome from './Pages/LoginHome';
 import Fooldal from './Pages/Fooldal';
 import Images from './Images/sajtburger.jpg'
 import Carousel from './Comopnents/Carousel'
+import Service from './Pages/Service'
+
 
 
 
@@ -25,7 +27,7 @@ import Carousel from './Comopnents/Carousel'
       
       <Header />
       <main>
-        <Container >
+        <Container style={{ width:"700", padding:"30"}} >
         
      
 
@@ -35,6 +37,9 @@ import Carousel from './Comopnents/Carousel'
                 <Route path='/Login' element={<Login/>}></Route>
               </Routes>  
               <Carousel />
+              <Service />
+
+              
         </Container>
       </main>
       <Fooldal />

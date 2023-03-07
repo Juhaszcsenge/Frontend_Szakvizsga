@@ -38,4 +38,7 @@ html, body{
     border-radius: 15px;
     transition: all .3s;
 }
-
+.container-fluid {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
