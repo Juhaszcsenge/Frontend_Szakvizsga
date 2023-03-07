@@ -13,6 +13,7 @@ import Singup from './Pages/Singup';
 import LoginHome from './Pages/LoginHome';
 import Fooldal from './Pages/Fooldal';
 import Images from './Images/sajtburger.jpg'
+import Carousel from './Comopnents/Carousel'
 
 
 
@@ -25,16 +26,17 @@ import Images from './Images/sajtburger.jpg'
       <Header />
       <main>
         <Container >
-         
+        
+     
 
           
           <Routes>
                 <Route path='/register' element={<Singup/>}></Route>
                 <Route path='/Login' element={<Login/>}></Route>
               </Routes>  
+              <Carousel />
         </Container>
       </main>
-
       <Fooldal />
      
       
