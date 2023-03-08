@@ -1,0 +1,59 @@
+.services{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10vw;
+  margin-top: 4rem;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vw;
+  padding: 0 3vw;
+}
+img {
+  height: 2.8rem;
+}
+p{
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+}
+button{
+  padding: 0.6rem 3rem;
+  letter-spacing: 0.2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  border: none;
+  color: white;
+  background-color: black;
+  transition: 0.3s ease-in-out;
+}
+.yellow .button {
+  background-color: blueviolet;
+}
+:hover{
+  background-color: blueviolet;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 260px) and (max-width: 1080px) {
+    margin: 2rem;
+    .services {
+      grid-template-columns: 1fr;
+    }
+}
+.pink .button{
+     background-color: rgb(228, 56, 221);
+}

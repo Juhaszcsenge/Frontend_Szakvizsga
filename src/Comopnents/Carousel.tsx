@@ -4,8 +4,7 @@ import { Carousel, Container } from 'react-bootstrap';
 
 const MyCarousel: React.FC = () => {
   return (
-    <section id="etterem" className='etterem-block'>
-        <Container fluid style={{  padding:"30"}} >
+        <Container fluid >
         <div className='title-holder'>
         </div>
         <Carousel>
@@ -49,7 +48,7 @@ const MyCarousel: React.FC = () => {
       </Carousel.Item>
     </Carousel>
        </Container>
-    </section>
+    
   );
 };
 

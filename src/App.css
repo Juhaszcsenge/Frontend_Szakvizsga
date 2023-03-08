@@ -28,5 +28,6 @@ html, body{
 
 .container-fluid {
     margin: 0 auto;
-    max-width: 1200px;
+    height: 600px;
+    /*max-width: 1200px;*/
   }

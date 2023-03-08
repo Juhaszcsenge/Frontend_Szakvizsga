@@ -8,6 +8,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.css';
+import './Service.css';
 import Login from './Pages/Login';
 import Singup from './Pages/Singup';
 import LoginHome from './Pages/LoginHome';
@@ -15,7 +16,7 @@ import Fooldal from './Pages/Fooldal';
 import Images from './Images/sajtburger.jpg'
 import Carousel from './Comopnents/Carousel'
 import Service from './Pages/Service'
-import { MDBContainer } from 'mdb-react-ui-kit';
+
 
 
 
@@ -27,33 +28,23 @@ import { MDBContainer } from 'mdb-react-ui-kit';
       <>
       
       <Header />
-        <Container fluid style={{ padding:"30"}} >
+
         
      
 
           
           <Routes>
-                <Route path='/register' element={<Singup/>}></Route>
-                <Route path='/Login' element={<Login/>}></Route>
-              </Routes>  
-              <Row>
-                <Col>
-
-                </Col>
-              </Row>
-              <Service />
-           
-              
-        </Container>
-        <MDBContainer fluid> 
-              <Carousel  /> 
+              <Route path='/register' element={<Singup/>}></Route>
+              <Route path='/Login' element={<Login/>}></Route>
+          </Routes>  
+          <Container />
+          <Carousel  /> 
+          <Service />
                 
-               </MDBContainer>
-        <Container fluid>
-      <Row>
-        <Col>1 of 1</Col>
-      </Row>
-    </Container>
+               
+       
+      
+  
       <Fooldal />
      
       
