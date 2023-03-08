@@ -4,7 +4,7 @@ import {Link } from 'react-router-dom';
 import Header from './Comopnents/Header';
 import Footer from './Comopnents/Footer';
 import { Route,Routes } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.css';
@@ -15,6 +15,7 @@ import Fooldal from './Pages/Fooldal';
 import Images from './Images/sajtburger.jpg'
 import Carousel from './Comopnents/Carousel'
 import Service from './Pages/Service'
+import { MDBContainer } from 'mdb-react-ui-kit';
 
 
 
@@ -26,8 +27,7 @@ import Service from './Pages/Service'
       <>
       
       <Header />
-      <main>
-        <Container style={{ width:"700", padding:"30"}} >
+        <Container fluid style={{ padding:"30"}} >
         
      
 
@@ -36,12 +36,24 @@ import Service from './Pages/Service'
                 <Route path='/register' element={<Singup/>}></Route>
                 <Route path='/Login' element={<Login/>}></Route>
               </Routes>  
-              <Carousel />
-              <Service />
+              <Row>
+                <Col>
 
+                </Col>
+              </Row>
+              <Service />
+           
               
         </Container>
-      </main>
+        <MDBContainer fluid> 
+              <Carousel  /> 
+                
+               </MDBContainer>
+        <Container fluid>
+      <Row>
+        <Col>1 of 1</Col>
+      </Row>
+    </Container>
       <Fooldal />
      
       

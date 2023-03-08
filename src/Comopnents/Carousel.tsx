@@ -5,7 +5,7 @@ import { Carousel, Container } from 'react-bootstrap';
 const MyCarousel: React.FC = () => {
   return (
     <section id="etterem" className='etterem-block'>
-        <Container style={{display: 'block', width:"700", padding:"30"}} >
+        <Container fluid style={{  padding:"30"}} >
         <div className='title-holder'>
         </div>
         <Carousel>
