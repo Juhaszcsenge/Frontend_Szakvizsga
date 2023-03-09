@@ -30,4 +30,55 @@ html, body{
     margin: 0 auto;
     height: 600px;
     /*max-width: 1200px;*/
-  }
+}
+.services{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    direction: column;
+    gap: 1.5vw;
+    padding: 0 3vw;
+     
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    padding: 0 3vw;
+
+}
+.service-pink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    padding: 0 3vw;
+}
+img {
+    border-radius: 8px;
+    height: 7rem;
+}
+p{
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+}
+button{
+    padding: 0.6rem 3rem;
+    letter-spacing: 0.2rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    border: none;
+    color: white;
+    background-color: rgb(172, 21, 154);
+    transition: 0.3s ease-in-out;
+}
+  @media screen and (min-width: 260px) and (max-width: 1080px) {
+   
+}
+.services{
+    grid-template-columns: 1fr;
+}
+  
+  

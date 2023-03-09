@@ -11,7 +11,7 @@ const MyCarousel: React.FC = () => {
       <Carousel.Item>
         <img
           className="d-block w-100 h-400"
-          style={{width:"1000px", height:"500px"}}
+          style={{width:"1000px", height:"600px"}}
           src="./imag01.jpg"
           alt="First slide"
         />
@@ -23,7 +23,7 @@ const MyCarousel: React.FC = () => {
       <Carousel.Item>
         <img
           className="d-block w-100 h-400"
-          style={{width:"1000px", height:"500px"}}
+          style={{width:"1000px", height:"600px"}}
           src="./páros menü.jpg"
           alt="Second slide"
         />
@@ -36,7 +36,7 @@ const MyCarousel: React.FC = () => {
       <Carousel.Item>
         <img
           className="d-block w-100 h-400"
-          style={{width:"1000px", height:"500px"}}
+          style={{width:"1000px", height:"600px"}}
           src="sajtburger.jpg"
           alt="Third slide"
         />

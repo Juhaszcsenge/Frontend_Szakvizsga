@@ -8,7 +8,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.css';
-import './Service.css';
 import Login from './Pages/Login';
 import Singup from './Pages/Singup';
 import LoginHome from './Pages/LoginHome';
