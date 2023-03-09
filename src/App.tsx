@@ -15,6 +15,7 @@ import Fooldal from './Pages/Fooldal';
 import Images from './Images/sajtburger.jpg'
 import Carousel from './Comopnents/Carousel'
 import Service from './Pages/Service'
+import Menu from './Pages/Menu'
 
 
 
@@ -39,6 +40,7 @@ import Service from './Pages/Service'
           <Container />
           <Carousel  /> 
           <Service />
+          <Menu />
                 
                
        

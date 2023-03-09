@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap/lib/Tab';
 
 
 export default  class Singup extends Component {
@@ -10,7 +9,7 @@ export default  class Singup extends Component {
                     <h1 className='pink' style={{textAlign: "center", color:"rgb(228, 56, 228)"}}>Szakácsaink</h1>
                 </div>
                 <div className='services'>
-                    <div className='servicex'>
+                    <div className='service'>
                         <img src='./white.jpg' alt=''></img>
                         <p style={{color:"rgb(228, 56, 228)"}}>
                         He Printing and Typesetting the industry. 
@@ -18,7 +17,7 @@ export default  class Singup extends Component {
                         </p>
                         <button>Read More</button>
                     </div>
-                    <div className='service-pink'>
+                    <div className='service'>
                         <img src='./white.jpg' alt=''></img>
                         <p style={{color:"rgb(228, 56, 228)"}}>
                         He Printing and Typesetting the industry.
