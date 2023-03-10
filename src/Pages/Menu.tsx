@@ -34,7 +34,7 @@ export default  class Menu extends Component {
             <section id="menux">
                 <div className="title">
                     <h1>
-                        <span style={{color:"rgb(228, 56, 228)"}}>Favorite All the time!</span> 
+                        <span>Favorite All the time!</span> 
                          
                     </h1>
                 </div>

@@ -6,12 +6,12 @@ export default  class Singup extends Component {
         return(
             <section id='services'>
                 <div className='title'>
-                    <h1 className='pink' style={{textAlign: "center", color:"rgb(228, 56, 228)"}}>Szakácsaink</h1>
+                    <h1 className='pink' style={{textAlign: "center"}}>Szakácsaink</h1>
                 </div>
                 <div className='services'>
                     <div className='service'>
                         <img src='./white.jpg' alt=''></img>
-                        <p style={{color:"rgb(228, 56, 228)"}}>
+                        <p>
                         He Printing and Typesetting the industry. 
                         has been the Industry's
                         </p>
@@ -19,7 +19,7 @@ export default  class Singup extends Component {
                     </div>
                     <div className='service'>
                         <img src='./white.jpg' alt=''></img>
-                        <p style={{color:"rgb(228, 56, 228)"}}>
+                        <p>
                         He Printing and Typesetting the industry.
                         has been the Industry's
                         </p>
@@ -27,7 +27,7 @@ export default  class Singup extends Component {
                     </div>
                     <div className='service'>
                         <img src='./white.jpg' alt=''></img>
-                        <p style={{color:"rgb(228, 56, 228)"}}>
+                        <p>
                         He Printing and Typesetting the industry. 
                         has been the Industry's
                         </p>

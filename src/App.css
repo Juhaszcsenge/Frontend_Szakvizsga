@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text&family=Nunito:ital@1&display=swap');
 
 html, body{
-    background-color: black;
-    font-family: 'Shantell Sans', cursive;
+    background-color:  black;
+    font-style:normal;
 }
 
 :root {
-    --bs-body-bg: black;
+    --bs-body-bg:   black;
     --bs-body-color: white;
 }
 
@@ -67,7 +66,7 @@ button{
     font-size: 1.1rem;
     border: none;
     color: white;
-    background-color: rgb(172, 21, 154);
+    background-color:  rgb(63, 0, 113);
     transition: 0.3s ease-in-out;
 }
   @media screen and (min-width: 260px) and (max-width: 1080px) {
@@ -134,7 +133,7 @@ button{
     border-radius: 4rem;
     transition: 0.5s ease-in-out;
     cursor: pointer;
-    background: linear-gradient(to right, #d623d6, #da14da);
+    background:  rgb(63, 0, 113);
     text-transform: uppercase;
 }
 
