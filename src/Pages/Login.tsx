@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { Link, Route, Router, Routes } from "react-router-dom";
+import { Container } from 'react-bootstrap';
 
 export default class  Login extends Component {
     render() {
         return(
-            <form>
+            <Container className="logcon">
+            <form className="rgblog">
+            <div className="form-bok"></div>
             <h1>Sing in</h1>
             <div className="mb-3">
                 <label>Email cím</label>
@@ -37,6 +39,7 @@ export default class  Login extends Component {
                 </p>
                     
         </form>
+        </Container>
         )
        
     }

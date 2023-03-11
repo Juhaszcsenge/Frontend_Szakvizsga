@@ -13,18 +13,6 @@ html, body{
     color: white;
     box-sizing: border-box;
 }
-.forgot-password,
-.forgot-password a {
-    text-align: right;
-    font-size:13px;
-    padding-top: 10px;
-    color: white;
-    margin: 0;
-}
-.forgot-password a{
-    color:rgb(228, 56, 228)
-}
-
 .container-fluid {
     margin: 0 auto;
     height: 600px;
@@ -148,15 +136,162 @@ button{
       grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
 .span{
     text-align: center;
 }
 
-.h4{
- align-items: center;
+/*------Sinup------*/
+.form{
+    display: flex;
+    background: rgb(11, 2, 32);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.regcon{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 32px;
+    overflow: hidden;
+}
+.regcon::before{
+    content:"";
+    position: absolute;
+    height: 650px;
+    width: 650px;
+    background: conic-gradient(
+        transparent,transparent,transparent, #d400d4
+    );
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+.regcon::after{
+    content:"";
+    position: absolute;
+    height: 650px;
+    width: 650px;
+    background: conic-gradient(
+        transparent,transparent,transparent, #8314b3
+    );
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.rgbborder{
+    position: absolute;
+    inset: 5px;
+    background-color: #0c1022;
+    z-index: 1;
+    border-radius: 16px;
+}
+.logcon{
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 32px;
+    overflow: hidden;
+}
+.logcon::before{
+    content:"";
+    position: absolute;
+    height: 650px;
+    width: 650px;
+    background: conic-gradient(
+        transparent,transparent,transparent, #d400d4
+    );
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+.logcon::after{
+    content:"";
+    position: absolute;
+    height: 650px;
+    width: 650px;
+    background: conic-gradient(
+        transparent,transparent,transparent, #8314b3
+    );
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.rgblog{
+    position: absolute;
+    inset: 5px;
+    background-color: #0c1022;
+    z-index: 1;
+    border-radius: 16px;
+}
+.form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+.form-box .form h3{
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
+.form .form-control{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid white;
+}
+.form input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 35px 0 5px;
+    color: rgb(117, 15, 121);
+}
+.mb-3 label{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50);
+    font-size: 16px;
+    pointer-events: none;
+    transform: .3s;
+}
+.forgot-password,
+.forgot-password a {
+    text-align: right;
+    font-size:13px;
+    padding-top: 10px;
+    color: white;
+    margin: 0;
+}
+.forgot-password a{
+    color:rgb(228, 56, 228)
 }
 
-  
-  
+

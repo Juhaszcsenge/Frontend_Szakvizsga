@@ -1,11 +1,14 @@
 import React, {Component} from "react";
+import { Container } from 'react-bootstrap';
 
 export default  class Singup extends Component {
     render() {
         return(
-            <form>
+          <Container className="regcon">
+            <form className="rgbborder">
+            <div className="form-box"></div>
             <h3 style={{margin:'top'}}>Sign Up</h3>
-            <div className="mb-3">
+            <div className="input-box">
               <label>Vezeték név</label>
               <input
                 type="text"
@@ -13,11 +16,11 @@ export default  class Singup extends Component {
                 placeholder="First name"
               />
             </div>
-            <div className="mb-3">
+            <div className="input-box">
               <label>Kereszt név</label>
               <input type="text" className="form-control" placeholder="Second name" />
             </div>
-            <div className="mb-3">
+            <div className="input-box">
               <label>Email cím</label>
               <input
                 type="email"
@@ -25,7 +28,7 @@ export default  class Singup extends Component {
                 placeholder="Enter email"
               />
             </div>
-            <div className="mb-3">
+            <div className="input-box">
               <label>Jelszó</label>
               <input
                 type="password"
@@ -42,6 +45,7 @@ export default  class Singup extends Component {
               Már regisztrált <a href="/sign-in">bejelentkezik?</a>
             </p>
           </form>
+        </Container>
            
             
         )

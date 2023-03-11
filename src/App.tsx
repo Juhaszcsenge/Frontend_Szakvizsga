@@ -28,24 +28,20 @@ import Menu from './Pages/Menu'
       
       <Header />
 
-        
-     
-
-          
-          <Routes>
-              <Route path='/register' element={<Singup/>}></Route>
-              <Route path='/Login' element={<Login/>}></Route>
-          </Routes>  
           <Container />
           <Carousel  /> 
           <Service />
           <Menu />
+          <Fooldal />
                 
-               
+          <Routes>
+              <Route path='/register' element={<Singup/>}></Route>
+              <Route path='/Login' element={<Login/>}></Route>
+          </Routes>   
        
       
   
-      <Fooldal />
+      
      
       
       <Footer />
