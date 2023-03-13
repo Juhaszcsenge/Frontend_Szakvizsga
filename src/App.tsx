@@ -9,12 +9,12 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.css';
 import Login from './Pages/Login';
 import Singup from './Pages/Singup';
-import LoginHome from './Pages/LoginHome';
 import Fooldal from './Pages/Fooldal';
 import Images from './Images/sajtburger.jpg'
 import Carousel from './Comopnents/Carousel'
-import Service from './Pages/Service'
-import Menu from './Pages/Menu'
+import Service from './Pages/Service';
+import Menu from './Pages/Menu';
+import Contact from './Pages/Contact';
 
 
 
@@ -29,14 +29,21 @@ import Menu from './Pages/Menu'
       <Header />
 
           <Container />
-          <Carousel  /> 
+          <Fooldal />
+          {/* <Carousel  />  */}
           <Service />
           <Menu />
-          <Fooldal />
+          <Contact />
+         
                 
           <Routes>
-              <Route path='/register' element={<Singup/>}></Route>
-              <Route path='/Login' element={<Login/>}></Route>
+              <Route path='/Singup' element={<Singup></Singup>}></Route>
+              <Route path='/Home' element={<Fooldal></Fooldal>}></Route>
+
+
+              <Route path='/login' element={<Login></Login>}></Route>
+              <Route path='/Menu' element={<Menu></Menu>}></Route>
+
           </Routes>   
        
       

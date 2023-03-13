@@ -9,8 +9,8 @@ function LoginHome() {
         <div className="App">
           <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="conatiner">
-              <Link className="navbar-brand" to={"/sing-in"}>
-                Sing in
+              <Link className="navbar-brand" to={"/SingUp"}>
+                Sing up
               </Link>
               <div
                 className="collapse navbar-collapse"
@@ -18,8 +18,8 @@ function LoginHome() {
               >
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/sing-up"}>
-                      Sing Up
+                    <Link className="nav-link" to={"/Login"}>
+                      Login
                     </Link>
                   </li>
                 </ul>

@@ -1,5 +1,14 @@
 import React, {Component} from "react";
 import { Container } from 'react-bootstrap';
+import {Link} from "react-router-dom";
+
+
+interface State{
+  singEmail: string;
+  singPass: string;
+}
+
+
 
 export default  class Singup extends Component {
     render() {
@@ -42,8 +51,7 @@ export default  class Singup extends Component {
               </button>
             </div>
             <p className="forgot-password text-right">
-              Már regisztrált <a href="/sign-in">bejelentkezik?</a>
-            </p>
+              Már regisztrált <Link to="./Login.tsx"></Link>bejelentkezik?</p>
           </form>
         </Container>
            

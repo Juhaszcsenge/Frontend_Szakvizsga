@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { Container } from 'react-bootstrap';
+ 
 export default  class Menu extends Component {
     render(){
         const data = [
@@ -31,10 +32,11 @@ export default  class Menu extends Component {
 
         ];
         return(
+            <Container>
             <section id="menux">
                 <div className="title">
                     <h1>
-                        <span>Favorite All the time!</span> 
+                        <span>Aktuális kedvenceink</span> 
                          
                     </h1>
                 </div>
@@ -56,6 +58,7 @@ export default  class Menu extends Component {
 
                 </div>
             </section>
+        </Container>
         )
 
     }

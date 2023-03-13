@@ -1,7 +1,13 @@
 
-html, body{
-    background-color:  black;
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 75px;
     font-style:normal;
+}
+body{
+    background-color: black !important;
+  
+    position: relative;
 }
 
 :root {
@@ -18,15 +24,27 @@ html, body{
     height: 600px;
     /*max-width: 1200px;*/
 }
+.d-block{
+    background-size: cover;
+    background-position: top center;
+}
 
 /*----------Services--------*/
 
+/*.service-bx{
+    background: #0c1022;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+}*/
 .services{
     display: flex;
     grid-template-columns: repeat(3, 1fr);
     direction: column;
     gap: 1.5vw;
     padding: 0 3vw;
+    position: relative;
      
 }
 
@@ -36,6 +54,11 @@ html, body{
     align-items: center;
     gap: 1.5vw;
     padding: 0 3vw;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+    background: #151515;
 }
 img {
     border-radius: 8px;
@@ -47,6 +70,7 @@ p{
     font-size: 1.1rem;
     letter-spacing: 0.1rem;
 }
+
 button{
     padding: 0.6rem 3rem;
     letter-spacing: 0.2rem;
@@ -295,3 +319,39 @@ button{
 }
 
 
+/*-------------Contact--------*/
+
+.contact-container{
+    background: (90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    padding: 60px 0 200px 0;
+    display: flex;
+    flex-direction: row;
+}
+.contact input, textarea{
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(136, 13, 167, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin-right: 50px;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+.contact input::placeholder, .contact textarea::placeholder{
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.form{
+    flex:1;
+}
+.contact-image{
+    width: 300px;
+    height: auto;
+    margin-left: 50px;
+}
+
+ 

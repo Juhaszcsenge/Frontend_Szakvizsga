@@ -22,7 +22,7 @@ export default class  Header extends Component {
                 </Nav>
               </Navbar.Collapse>
               <Link className='btn 'style={{marginRight:'7px'}} to='/Login'>Bejelentkezés</Link>
-              <Link className='btn ' to='/register'>Regisztrálás</Link>
+              <Link className='btn ' to='/Singup'>Regisztrálás</Link>
 
             </Navbar>
             

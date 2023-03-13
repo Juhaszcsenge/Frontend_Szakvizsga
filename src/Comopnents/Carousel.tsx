@@ -10,9 +10,9 @@ const MyCarousel: React.FC = () => {
         <Carousel>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-400"
-          style={{width:"1000px", height:"650px"}}
-          src="./fire.jpg"
+          className="d-block w-100"
+          style={{width:"1000px", height:"680px"}}
+          src="./background.avif"
           alt="First slide"
         />
         <Carousel.Caption>
