@@ -1,13 +1,13 @@
 
 html{
     scroll-behavior: smooth;
-    scroll-padding: 75px;
+    scroll-padding: 80px;
     font-style:normal;
 }
 body{
     background-color: black !important;
-  
     position: relative;
+    scroll-padding: 80px;
 }
 
 :root {
@@ -28,16 +28,15 @@ body{
     background-size: cover;
     background-position: top center;
 }
+/*------------IMG-----------*/
+.cover{
+  width: 2200px;
+  height: 730px;
+}
 
 /*----------Services--------*/
 
-/*.service-bx{
-    background: #0c1022;
-    border-radius: 64px;
-    text-align: center;
-    padding: 60px 50px;
-    margin-top: -60px;
-}*/
+
 .services{
     display: flex;
     grid-template-columns: repeat(3, 1fr);
@@ -47,7 +46,10 @@ body{
     position: relative;
      
 }
+.h1 .pink{
+    padding: 60px;
 
+}
 .service {
     display: flex;
     flex-direction: column;
@@ -56,9 +58,10 @@ body{
     padding: 0 3vw;
     border-radius: 64px;
     text-align: center;
-    padding: 60px 50px;
+    padding: 70px 50px;
     margin-top: -60px;
     background: #151515;
+    margin-top: -150px;
 }
 img {
     border-radius: 8px;
@@ -95,10 +98,11 @@ button{
     grid-template-columns: repeat(3, 1fr);
     direction: column;
     gap: 1.5vw;
-    padding: 0 3vw;
+    padding: 2 10vw;
 }
 .menu {
     display: flex;
+    padding: 30px;
 }
 .menus{
     display: flex;
@@ -110,6 +114,11 @@ button{
 }
 .h3{
     color: rgb(228, 56, 228);
+}
+.title{
+    padding: 20px;
+    margin-top: auto;
+    text-align: center;
 }
 .p{
     text-align: center;
@@ -159,9 +168,6 @@ button{
     .menux {
       grid-template-columns: repeat(2, 1fr);
     }
-}
-.span{
-    text-align: center;
 }
 
 /*------Sinup------*/
@@ -321,37 +327,46 @@ button{
 
 /*-------------Contact--------*/
 
-.contact-container{
-    background: (90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    padding: 60px 0 200px 0;
-    display: flex;
-    flex-direction: row;
+.contact{
+  background: linear-gradient(90.21deg, #3e053f -5.91%, #2f0c53 111.58%);
+  padding: 35px 0 100px 0;
+  border-radius: 40px;
 }
-.contact input, textarea{
-  width: 100%;
+
+.contact form input, form textarea{
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(136, 13, 167, 0.5);
   border-radius: 20px;
+  justify-content: center;
   color: #fff;
-  margin-right: 50px;
+  margin-right: 50%px;
   padding: 18px 26px;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
+  border-radius: 2%;
+  width: 100%;
+  
 }
-.contact input::placeholder, .contact textarea::placeholder{
+.contact form input::focus, .contact form textarea::focus{
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+}
+.contact input::placeholder, .contact form textarea::placeholder{
   font-size: 16px;
   font-weight: 400;
   color: #fff;
 }
-.form{
-    flex:1;
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder{
+    color: #121212;
+    opacity: 0.8;
 }
 .contact-image{
     width: 300px;
     height: auto;
     margin-left: 50px;
+    border-radius: 40px;
 }
 
  

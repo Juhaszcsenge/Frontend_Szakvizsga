@@ -11,12 +11,11 @@ export default class  Header extends Component {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                  <Nav.Link href="#home">Főoldal</Nav.Link>
-                  <Nav.Link href="#link" >Menü</Nav.Link>
+                  <Nav.Link href="/">Főoldal</Nav.Link>
+                  <Nav.Link href="/" >Menü</Nav.Link>
                   <NavDropdown  title="Továbbiak" id="basic-nav-dropdown" >
-                    <NavDropdown.Item href="#action/3.1">Kosár</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2" >Galéria</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3" >Kapcsolat</NavDropdown.Item>
+                    <NavDropdown.Item href="/">Kosár</NavDropdown.Item>
+                    <NavDropdown.Item href="/" >Galéria</NavDropdown.Item>
                     <NavDropdown.Divider/>
                   </NavDropdown>
                 </Nav>

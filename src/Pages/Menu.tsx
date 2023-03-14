@@ -23,12 +23,7 @@ export default  class Menu extends Component {
                 image:'./csaladi csomag.jpg',
                 name:"Családi Csomag",
                 price:"5999Ft"
-            },
-            {
-                image:'./hamburger krumplival.webp',
-                name:"Menü",
-                price:"1500FT"
-            },
+            }
 
         ];
         return(

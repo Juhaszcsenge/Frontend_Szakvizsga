@@ -24,14 +24,15 @@ const ContactForm = () => {
   };
 
   return (
-    <Container className="contact-container">
-    <section className="contact" id="connect">
-        <Row clasName="algin-items-center">
-            <Col size={12} md={6}>
+    <Container className="contact">
+    <section  id="connect">
+        <div className="algin-items-center">
+          <Row>
+          <Col md={6}>
                 <img className="contact-image" src="./ham.jpg" alt="" style={{width:"450px", height:"300px"}}></img>
                 </Col>
-        </Row>
-        <form onSubmit={handleSubmit}>
+                <Col md={6}>
+                <form onSubmit={handleSubmit}>
         <label>
             Név:
             <input type="text" name="name" value={formState.name} onChange={handleChange} />
@@ -47,6 +48,9 @@ const ContactForm = () => {
         <button type="submit">Küldés</button>
       
     </form>
+                </Col>
+          </Row>
+        </div>
     </section>
     </Container>
   );

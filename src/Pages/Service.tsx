@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container,Col,Row } from 'react-bootstrap';
 
 
+
 export default  class Singup extends Component {
     render(){
         return(
@@ -11,7 +12,7 @@ export default  class Singup extends Component {
                         <Col>
                         <div className='skill-bx wow zoomIN'></div>
                         <div className='title'>
-                            <h1 className='pink' style={{textAlign: "center"}}>Szakácsaink</h1>
+                            <h1 className='pink' style={{textAlign: "center", marginTop:"-190px"}}>Szakácsaink</h1>
                         </div>
                         <div className='services'>
                             <div className='service'>
