@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import { Container } from 'react-bootstrap';
 import {Link} from "react-router-dom";
-import {ResponseMess} from 
+import {ResponseMess} from "../Response";
 
 
-interface State{
+interface State {
   message: string[];
   singEmail: string;
   singFullname: string;
@@ -13,7 +13,7 @@ interface State{
 }
 
 
-export default  class Singup extends Component <{}, State>{
+class Singup extends Component <{}, State> {
   constructor(props: {}){
     super(props);
 
@@ -75,7 +75,7 @@ export default  class Singup extends Component <{}, State>{
 
        }
     }
-  }
+  
 
     render() {
         return(
@@ -85,7 +85,7 @@ export default  class Singup extends Component <{}, State>{
             <h3 style={{margin:'top'}}>Sign Up</h3>
             <div className="input-box">
               <label>Teljes név</label>
-              <input type="text" value={this.state.singFullName} onChange={e => this.setState({singFullName: e.currentTarget.value})} className="form-control" placeholder="Full name" />
+              <input type="text" value={this.state.singFullname} onChange={e => this.setState({singFullname: e.currentTarget.value})} className="form-control" placeholder="Full name" />
             </div>
             <div className="input-box">
               <label>Email cím</label>
@@ -117,3 +117,5 @@ export default  class Singup extends Component <{}, State>{
         )
     }
 }
+
+export default Singup;
