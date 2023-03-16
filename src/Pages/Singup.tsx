@@ -73,7 +73,7 @@ class Singup extends Component <{}, State> {
           this.setState({message: sing.message})
         }
 
-       }
+      }
     }
   
 
