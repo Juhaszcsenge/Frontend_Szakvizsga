@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+/*import React, {Component} from "react";
 
 export default class Fooldal extends Component{
     render(){
@@ -6,3 +6,4 @@ export default class Fooldal extends Component{
             
         )
     }
+}*/

@@ -43,11 +43,11 @@ class Singup extends Component <{}, State> {
         return;
        }
        else{
-        const date ={
-          fullName: this.state.singFullname,
-          email: this.state.singEmail,
-          password: this.state.singPass,
-          repassword: this.state.singRePass
+        const data ={
+          "fullName": this.state.singFullname,
+          "email": this.state.singEmail,
+          "password": this.state.singPass,
+          "repassword": this.state.singRePass
         };
 
         let response = await fetch("http://localhost:3000/user/register",{
@@ -56,7 +56,7 @@ class Singup extends Component <{}, State> {
           'Authorization' : 'Bearer ' + a0565e94fb8fbe8a4343c23da6616414f35add2139d11da8fcea65943484ce7e
           'Content-Type': 'application/json'
           },*/
-          body: JSON.stringify(Register request),
+          body: JSON.stringify(data),
         });
 
         if(response.ok){

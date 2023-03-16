@@ -1,7 +1,65 @@
 import React, { Component } from "react";
 import { Container } from 'react-bootstrap';
+import {ResponseMess} from "../Response";
 
-export default class  Login extends Component {
+
+    interface State {
+        message: string[];
+        LogEmail: string;
+        LogPass: string;
+      }
+      
+      
+      class Login extends Component <{}, State> {
+        constructor(props: {}){
+          super(props);
+      
+          this.state = {
+            message: [],
+            LogEmail: '',
+            LogPass: ''
+          }
+        }
+          handleRegister = async () => {
+             if (this.state.LogEmail.trim() === ''){
+              this.setState({message: ['Kérjük adja meg az email címét!'] })
+              return;
+             }
+             else if(this.state.LogPass === ''){
+              this.setState({message: ['Kérjük adja meg a jelszavát']})
+              return;
+             }
+             else{
+              const data ={
+                email: this.state.LogEmail,
+                password: this.state.LogPass,
+              };
+      
+              let response = await fetch("http://localhost:3000/auth/login",{
+                method: 'POST',
+                /*headers: {
+                'Authorization' : 'Bearer ' + a0565e94fb8fbe8a4343c23da6616414f35add2139d11da8fcea65943484ce7e
+                'Content-Type': 'application/json'
+                },*/
+                body: JSON.stringify(data),
+              });
+      
+              if(response.ok){
+                this.setState({
+                  LogEmail: '',
+                  LogPass: '',
+                })
+                this.setState({message: ['Sikeres bejelentkeztés']})
+              }
+              else{
+                const sing = await response.json() as ResponseMess 
+                this.setState({message: sing.message})
+              }
+      
+             }
+          }
+        
+    
     render() {
         return(
             <Container className="logcon">
@@ -44,3 +102,5 @@ export default class  Login extends Component {
        
     }
 }
+
+export default Login;
