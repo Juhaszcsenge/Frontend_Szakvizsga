@@ -11,8 +11,9 @@ import Singup from './Pages/Singup';
 import Fooldal from './Pages/Fooldal';
 import Carousel from './Comopnents/Carousel'
 import Service from './Pages/Service';
-import Menu from './Pages/Menu';
+import Menu from './Pages/Menukedvencek';
 import Contact from './Pages/Contact';
+import Menukedvencek from './Pages/Menukedvencek';
 
 
 
@@ -32,7 +33,7 @@ import Contact from './Pages/Contact';
               
 
               <Route path='/login' element={<Login></Login>}></Route>
-              <Route path='/Menu' element={<Menu></Menu>}></Route>
+              <Route path='/Menu' element={<Menukedvencek></Menukedvencek>}></Route>
 
           </Routes> 
       </>
