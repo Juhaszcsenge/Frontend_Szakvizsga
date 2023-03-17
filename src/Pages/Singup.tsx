@@ -85,26 +85,31 @@ class Singup extends Component <{}, State> {
             <h3 style={{margin:'top'}}>Sign Up</h3>
             <div className="input-box">
               <label>Teljes név</label>
-              <input type="text" value={this.state.singFullname} onChange={e => this.setState({singFullname: e.currentTarget.value})} className="form-control" placeholder="Full name" />
+              <input type="text" required value={this.state.singFullname} onChange={e => this.setState({singFullname: e.currentTarget.value})}  />
             </div>
             <div className="input-box">
               <label>Email cím</label>
               <input
                 type="email"
-                className="form-control"
-                placeholder="Enter email"
+                required
               />
             </div>
             <div className="input-box">
               <label>Jelszó</label>
               <input
                 type="password"
-                className="form-control"
-                placeholder="Enter password"
+                required
+              />
+            </div>
+            <div className="input-box">
+              <label>Jelszó mégegyszer</label>
+              <input
+                type="password"
+                required
               />
             </div>
             <div className="d-grid">
-              <button type="submit" className="btn btn-primary" onClick={this.handleRegister}>
+              <button type="submit" style={{backgroundColor:" rgb(63, 0, 113)"}}  onClick={this.handleRegister}>
                 Regisztráció
               </button>
             </div>
