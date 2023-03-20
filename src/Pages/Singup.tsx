@@ -90,6 +90,7 @@ class Singup extends Component <{}, State> {
               <input
                 type="email"
                 required
+                value={this.state.singEmail} onChange={e => this.setState({singEmail: e.currentTarget.value})}
               />
             </div>
             <div className="input-box">
@@ -97,6 +98,7 @@ class Singup extends Component <{}, State> {
               <input
                 type="password"
                 required
+                value={this.state.singPass} onChange={e => this.setState({singPass: e.currentTarget.value})}
               />
             </div>
             <div className="input-box">
@@ -104,6 +106,7 @@ class Singup extends Component <{}, State> {
               <input
                 type="password"
                 required
+                value={this.state.singRePass} onChange={e => this.setState({singRePass: e.currentTarget.value})}
               />
             </div>
             <div className="d-grid">
@@ -112,7 +115,7 @@ class Singup extends Component <{}, State> {
               </button>
             </div>
             <p className="forgot-password text-right">
-              Már regisztrált <Link to="./Login.tsx"></Link>bejelentkezik?</p>
+              Már regisztrált <Link to="./Login"></Link>bejelentkezik?</p>
           </form>
         </Container>
            
