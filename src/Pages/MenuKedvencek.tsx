@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
  
-export default  class Menu extends Component {
+export default  class MenuKedvencek extends Component {
     render(){
         const data = [
             {

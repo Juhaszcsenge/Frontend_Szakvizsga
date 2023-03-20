@@ -42,7 +42,8 @@ class Singup extends Component <{}, State> {
         this.setState({message: ['A két jelszó  nem egyezik']})
         return;
        }
-       else{
+       
+        console.log("mukszik?")
         const data ={
           "fullName": this.state.singFullname,
           "email": this.state.singEmail,
@@ -52,12 +53,9 @@ class Singup extends Component <{}, State> {
 
         let response = await fetch("http://localhost:3000/user/register",{
           method: 'POST',
-          /*headers: {
-          'Authorization' : 'Bearer ' + a0565e94fb8fbe8a4343c23da6616414f35add2139d11da8fcea65943484ce7e
-          'Content-Type': 'application/json'
-          },*/
           body: JSON.stringify(data),
         });
+        console.log(response.status)
 
         if(response.ok){
           this.setState({
@@ -73,7 +71,7 @@ class Singup extends Component <{}, State> {
           this.setState({message: sing.message})
         }
 
-      }
+      
     }
   
 
