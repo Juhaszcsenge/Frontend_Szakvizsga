@@ -30,8 +30,12 @@ body{
 }
 /*------------IMG-----------*/
 .cover{
-  width: 2200px;
+  width: 1890px;
   height: 730px;
+}
+.cover2{
+    height: 750px;
+    width: 1900px;
 }
 
 /*----------Services--------*/

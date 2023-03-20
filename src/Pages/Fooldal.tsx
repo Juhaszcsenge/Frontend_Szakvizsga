@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { Container } from 'react-bootstrap';
 import Service from "./Service";
-import Menu from "./Menukedvencek";
+import Menu from "./Menu";
 import Contact from "./Contact";
 import Footer from "../Comopnents/Footer";
 import '../App.css';
