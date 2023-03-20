@@ -37,12 +37,11 @@ import {ResponseMess} from "../Response";
       
               let response = await fetch("http://localhost:3000/auth/login",{
                 method: 'POST',
-                /*headers: {
-                'Authorization' : 'Bearer ' + a0565e94fb8fbe8a4343c23da6616414f35add2139d11da8fcea65943484ce7e
-                'Content-Type': 'application/json'
-                },*/
+                headers: {
+                "Content-Type": "application/json"
+                },
                 body: JSON.stringify(data),
-              });
+             });
       
               if(response.ok){
                 this.setState({
@@ -72,6 +71,7 @@ import {ResponseMess} from "../Response";
                 type="email"
                 className="form-control"
                 placeholder="Enter email"
+                required value={this.state.LogEmail} onChange={e => this.setState({LogEmail: e.currentTarget.value})}
                 />
             </div>
             <div className="mb-3">
@@ -79,7 +79,8 @@ import {ResponseMess} from "../Response";
                 <input 
                 type="password"
                 className="form-control"
-                placeholder="Enter password" />
+                placeholder="Enter password" 
+                required value={this.state.LogPass} onChange={e => this.setState({LogPass: e.currentTarget.value})}/>
                 </div>
 
                 <div className="mb-3">
@@ -90,7 +91,7 @@ import {ResponseMess} from "../Response";
                     </label>
                 </div>
                 <div className="d-grid">
-                    <button type="submit" style={{backgroundColor:'black', color:' rgb(228, 56, 228)'}}>Submit</button>
+                    <button type="button" style={{backgroundColor:'black', color:' rgb(228, 56, 228)'}}>Submit</button>
                 </div>
                 <p className="forgot-password text-right" style={{color:'rgb(228, 56, 228)'}}>
                     Elfelejett <a href="#">jelszó?</a>

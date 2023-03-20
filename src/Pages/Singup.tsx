@@ -53,11 +53,14 @@ class Singup extends Component <{}, State> {
 
         let response = await fetch("http://localhost:3000/user/register",{
           method: 'POST',
+          headers: {
+            "Content-Type": "application/json"
+            },
           body: JSON.stringify(data),
         });
         console.log(response.status)
 
-        if(response.ok){
+        if(response.status === 201){
           this.setState({
             singFullname: '',
             singEmail: '',
@@ -110,9 +113,10 @@ class Singup extends Component <{}, State> {
               />
             </div>
             <div className="d-grid">
-              <button type="submit" style={{backgroundColor:" rgb(63, 0, 113)"}}  onClick={this.handleRegister}>
+              <button type="button" style={{backgroundColor:" rgb(63, 0, 113)"}}  onClick={this.handleRegister}>
                 Regisztráció
               </button>
+              <p>{this.state.message}</p>
             </div>
             <p className="forgot-password text-right">
               Már regisztrált <Link to="./Login"></Link>bejelentkezik?</p>

@@ -312,7 +312,7 @@ button{
     font-size: 16px;
     padding: 0 35px 0 5px;
     color: white;
-    transition: .3s;
+    transition: .5s;
 }
 input:focus ~ label,
 input:valid ~ label{
@@ -326,7 +326,7 @@ input:valid ~ label{
     transform: translateY(-50);
     font-size: 16px;
     pointer-events: none;
-    transform: .3s;
+    transform: .5s;
 }
 .forgot-password,
 .forgot-password a {
