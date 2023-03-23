@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Container } from 'react-bootstrap';
-import {ResponseMess} from "../Response";
+import { TokenObj } from '../token';
 
 
     interface State {
         message: string[];
         LogEmail: string;
         LogPass: string;
+        token: string;
       }
       
       
@@ -17,16 +18,13 @@ import {ResponseMess} from "../Response";
           this.state = {
             message: [],
             LogEmail: '',
-            LogPass: ''
+            LogPass: '',
+            token: ''
           }
         }
-          handleRegister = async () => {
-             if (this.state.LogEmail.trim() === ''){
-              this.setState({message: ['Kérjük adja meg az email címét!'] })
-              return;
-             }
-             else if(this.state.LogPass === ''){
-              this.setState({message: ['Kérjük adja meg a jelszavát']})
+          handleLogin = async () => {
+             if (this.state.LogEmail.trim()&& this.state.LogPass === ''){
+              this.setState({message: ['Ne hagyja üresen a mezőket!'] })
               return;
              }
              else{
@@ -44,15 +42,14 @@ import {ResponseMess} from "../Response";
              });
       
               if(response.ok){
+                  const res = await response.json() as TokenObj
+
+
                 this.setState({
-                  LogEmail: '',
-                  LogPass: '',
+                  token: res.token,
+                  message:['Sikeres bejelentkezés']
                 })
-                this.setState({message: ['Sikeres bejelentkeztés']})
-              }
-              else{
-                const sing = await response.json() as ResponseMess 
-                this.setState({message: sing.message})
+                localStorage.setItem('token', this.state.token)
               }
       
              }
