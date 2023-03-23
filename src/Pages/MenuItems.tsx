@@ -41,7 +41,7 @@ export default class MenuItems extends Component< {}, State> {
         this.loadData()
     }
 
-
+      
 
     render(){
         return(
@@ -52,8 +52,7 @@ export default class MenuItems extends Component< {}, State> {
             </div>
             <section id="menuitem">
             <h1>
-                <span>Aktuális kedvenceink</span> 
-                         
+                <span style={{textAlign: "center"}}>Aktuális kedvenceink</span>            
             </h1>
             <div className="burgers">
             {this.state.menuItems.map(item => (
