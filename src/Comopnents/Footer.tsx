@@ -36,10 +36,7 @@ import {
             </MDBContainer>
       
             <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0)' }}>
-              © 2020 Copyright:
-              <a className='text' href='https://mdbootstrap.com/'>
-                MDBootstrap.com
-              </a>
+             <h1>Burger</h1>
             </div>
           </MDBFooter>
         );

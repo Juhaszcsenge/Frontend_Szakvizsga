@@ -37,10 +37,12 @@ const ContactForm = () => {
             Név:
             <input type="text" name="name" value={formState.name} onChange={handleChange} />
         </label>
+        <br />
         <label>
             E-mail:
-            <input type="email" name="email" value={formState.email} onChange={handleChange} />
+            <input type="email" name="email" value={formState.email} onChange={handleChange} /> 
         </label>
+        <br />
         <label>
             Üzenet:
             <textarea name="message" value={formState.message} onChange={handleChange} />
