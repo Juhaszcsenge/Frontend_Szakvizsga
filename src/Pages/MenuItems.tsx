@@ -14,6 +14,7 @@ interface Menu{
     food_description : string;
     food_category : string;
     food_price : number;
+    food_image: string;
 }
 
 interface MenuResponse{
@@ -47,7 +48,7 @@ export default class MenuItems extends Component< {}, State> {
         return(
             <Container fluid>
             <div className="imgcontainer">
-                <img src="./background2.avif" alt="" className="cover2">
+                <img src="background_menu.avif" alt="" className="cover2">
                 </img>
             </div>
             <section id="menuitem">
@@ -57,7 +58,17 @@ export default class MenuItems extends Component< {}, State> {
             <div className="burgers">
             {this.state.menuItems.map(item => (
                 <p>{item.food_name}</p>
-            ))}
+            )
+            )}
+            </div>
+            <div className="hamburg">
+                <div className="burimage">
+                    <img src="http://localhost:3000/burgers/{food_image}"></img>
+                </div>
+                <h1>Sajtburi 1500ft</h1>
+                <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
+                <button>Buy now</button>
+
             </div>
 
             </section>
