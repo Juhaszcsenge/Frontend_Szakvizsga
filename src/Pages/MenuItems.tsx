@@ -5,6 +5,7 @@ import Footer from "../Comopnents/Footer";
 
 interface State{
     menuItems: Menu[]
+    token: string
 
 }
 
@@ -21,11 +22,20 @@ interface MenuResponse{
     menu : Menu[]
 }
 
+interface CartItems{
+    id: string;
+    total: number;
+    quantity: number;
+    menuItem: Menu;
+}
+
 export default class MenuItems extends Component< {}, State> {
     constructor(props: {}) {
         super(props)
         this.state = {
-            menuItems:[]
+            menuItems:[],
+            token: localStorage.getItem('token') || '' //iniczializálom a tokent
+
         }
     }
     
@@ -40,6 +50,23 @@ export default class MenuItems extends Component< {}, State> {
     }
     componentDidMount(): void { // lefussanak bizonyos függvényewk mikor betölt az oldal
         this.loadData()
+    }
+
+    AddToShoppingCart = async (menuItem: Menu)  =>  { //objektum 
+        let data = {
+            quantity: 1,
+            menuItem: menuItem
+        }
+        let response = await fetch("http://localhost:3000/Cart",{
+                method: 'POST',
+                headers: {
+                "Content-Type": "application/json",
+                'Authorization': "Bearer " + this.state.token,
+                },
+                body: JSON.stringify(data),
+            });
+        console.log(menuItem)
+
     }
 
       
@@ -57,7 +84,7 @@ export default class MenuItems extends Component< {}, State> {
             </h1>
             <div className="burgers">
             {this.state.menuItems.map(item => (
-                <p>{item.food_name}</p>
+                <><p>{item.food_name}</p><button onClick={(event) => this.AddToShoppingCart(item)}>Buy now</button></>
             )
             )}
             </div>
@@ -67,7 +94,6 @@ export default class MenuItems extends Component< {}, State> {
                 </div>
                 <h1>Sajtburi 1500ft</h1>
                 <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
-                <button>Buy now</button>
 
             </div>
 

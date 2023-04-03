@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container } from 'react-bootstrap';
 import { TokenObj } from '../token';
+import { useNavigate} from 'react-router-dom';
 
 
     interface State {
@@ -41,19 +42,27 @@ import { TokenObj } from '../token';
                 body: JSON.stringify(data),
              });
       
-              if(response.ok){
+              if(response.status === 201){
                   const res = await response.json() as TokenObj
-
+                 
 
                 this.setState({
                   token: res.token,
                   message:['Sikeres bejelentkezés']
                 })
                 localStorage.setItem('token', this.state.token)
+               
               }
       
              }
-          }
+
+            }
+
+       
+       redirect = async () => {
+        const navigate = useNavigate();
+        navigate('/Menu', {replace: true});
+       }
         
     
     render() {
@@ -88,8 +97,9 @@ import { TokenObj } from '../token';
                     </label>
                 </div>
                 <div className="d-grid">
-                    <button type="button" style={{backgroundColor:'black', color:' rgb(228, 56, 228)'}}>Submit</button>
+                    <button type="button" onClick={this.handleLogin} style={{backgroundColor:'black', color:' rgb(228, 56, 228)'}} >Submit</button>
                 </div>
+                <p>{this.state.message}</p>
                 <p className="forgot-password text-right" style={{color:'rgb(228, 56, 228)'}}>
                     Elfelejett <a href="#">jelszó?</a>
                 </p>
