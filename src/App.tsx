@@ -16,11 +16,29 @@ import Contact from './Pages/Contact';
 import MenuItems from './Pages/MenuItems';
 
 
+  interface State{
+    logedin: boolean
+  }
 
 
 
+  class App extends React.Component< {}, State>{
 
-  class App extends React.Component{
+    constructor(props: {}) {
+      super(props)
+      this.state = { 
+        logedin: false
+      }
+  }
+
+
+    
+
+
+     componentDidMount(): void { //mikor betöltődik az összes component akkor fut le 
+        
+     }
+    
 
     render() {
     return  <div>
@@ -38,6 +56,8 @@ import MenuItems from './Pages/MenuItems';
 
           </Routes> 
       </>
+
+      
       
     </div>
   }

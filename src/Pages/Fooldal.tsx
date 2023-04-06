@@ -10,18 +10,9 @@ import Loading from '../Loading'
 import LoadingPage from "../Comopnents/LoadingPage";
 
 
-interface State{
-    load:boolean;
-    
-  }
 
-export default class Fooldal extends Component<{},State>{
 
-    constructor(props:{}){
-        super(props);
-    
-        this.state={
-            load: true
+export default class Fooldal extends Component{
 
     render(){
         return(
@@ -30,8 +21,7 @@ export default class Fooldal extends Component<{},State>{
                     <img src="./perfect.webp" alt="" className="cover">
                     </img>
                 </div>
-                {this.state.load ? <LoadingPage/>}
-              <LoadingPage/>
+             
             <Service />
           <MenuKedvencek />
           <Contact />

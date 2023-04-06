@@ -50,7 +50,7 @@ import { useNavigate} from 'react-router-dom';
                   token: res.token,
                   message:['Sikeres bejelentkezés']
                 })
-                localStorage.setItem('token', this.state.token)
+                localStorage.setItem('token', res.token)
                
               }
       

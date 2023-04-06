@@ -19,7 +19,7 @@ export default class  Header extends Component {
              
   }
     render(){
-          if(localStorage.getItem('token') != null ){
+
             return(
               <Navbar bg="dark-p3" variant='dark' expand="lg" collapseOnSelect>
                 <Navbar.Brand href="#home" >Burgnyik</Navbar.Brand>
@@ -35,39 +35,30 @@ export default class  Header extends Component {
                     </NavDropdown>
                   </Nav>  
                 </Navbar.Collapse>
-                <Link className='btn 'style={{marginRight:'7px', color:"white"}} to='/Login' onClick={this.logout}>Kijelentkezés</Link>
+                
+                
+                {localStorage.getItem('token') === '' || localStorage.getItem('token') === null? //token ellenőrzés
+                <div>
+                  <Link className='btn 'style={{marginRight:'7px', color:"white"}} to='/Login'>Bejelentkezés</Link>
+                  <Link className='btn ' style={{color:"white"}} to='/Singup'>Regisztrálás</Link> 
+                  </div> : <div><Link className='btn 'style={{marginRight:'7px', color:"white"}} to='/Login' onClick={this.logout}>Kijelentkezés</Link></div>
+                }
 
               </Navbar>
               
             );
             
           }
-          else{
-            return(
-              <Navbar bg="dark-p3" variant='dark' expand="lg" collapseOnSelect>
-                <Navbar.Brand href="#home" >Burgnyik</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="ml-auto">
-                    <Nav.Link href="/" style={{color:"white"}}>Főoldal</Nav.Link>
-                    <Nav.Link href="/Menu" style={{color:"white"}} >Menü</Nav.Link>
-                    <NavDropdown  title="Továbbiak"  style={{color:"white"}} id="basic-nav-dropdown" >
-                      <NavDropdown.Item href="/">Kosár</NavDropdown.Item>
-                      <NavDropdown.Item href="/" >Galéria</NavDropdown.Item>
-                      <NavDropdown.Divider/>
-                    </NavDropdown>
-                  </Nav>  
-                </Navbar.Collapse>
-                <Link className='btn 'style={{marginRight:'7px', color:"white"}} to='/Login'>Bejelentkezés</Link>
-                <Link className='btn ' style={{color:"white"}} to='/Singup'>Regisztrálás</Link>
+}
+           
+               
           
             
-              </Navbar>
+             
               
-            );
-          }
+            
+          
     
-    }
+    
   
 
-}
