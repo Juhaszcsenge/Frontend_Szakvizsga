@@ -79,23 +79,22 @@ export default class MenuItems extends Component< {}, State> {
                 </img>
             </div>
             <section id="menuitem">
+                <div className="h1title">
             <h1>
-                <span style={{textAlign: "center"}}>Aktuális kedvenceink</span>            
+                <span style={{textAlign: "center"}}>Menü</span>            
             </h1>
+            </div>
             <div className="burgers">
             {this.state.menuItems.map(item => (
-                <><p>{item.food_name}</p><button onClick={(event) => this.AddToShoppingCart(item)}>Buy now</button></>
+                <><h2>{item.food_name}</h2> 
+                <img src={'http://localhost:3000/burgers/'+ item.food_image}></img>
+                <button onClick={(event) => this.AddToShoppingCart(item)}>Buy now</button>
+                <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
+                </>
             )
             )}
             </div>
-            <div className="hamburg">
-                <div className="burimage">
-                    <img src="http://localhost:3000/burgers/{food_image}"></img>
-                </div>
-                <h1>Sajtburi 1500ft</h1>
-                <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
-
-            </div>
+            
 
             </section>
             <Footer />

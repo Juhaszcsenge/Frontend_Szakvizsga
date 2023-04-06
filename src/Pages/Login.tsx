@@ -51,6 +51,7 @@ import { useNavigate} from 'react-router-dom';
                   message:['Sikeres bejelentkezés']
                 })
                 localStorage.setItem('token', res.token)
+                window.location.replace('/Fooldal')
                
               }
       

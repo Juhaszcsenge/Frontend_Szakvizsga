@@ -385,4 +385,69 @@ input:valid ~ label{
     border-radius: 40px;
 }
 
+
+/* ---------------------MenuItems------------------*/
+
+.menuitem{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    direction: column;
+    gap: 1.5vw;
+    padding: 2 10vw;
+}
+.burgers {
+    display: flex;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    padding: 0 3vw;
+}
+
+.h3{
+    color: rgb(228, 56, 228);
+}
+.h1titlte{
+    padding: 20px;
+    margin-top: auto;
+    text-align: center;
+}
+.p{
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    color:rgb(228, 56, 228)
+}
+
+.image{
+    max-height: 20rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.menu img{
+    height: 20rem;
+    width: 15rem;
+    object-fit: cover;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease;
+}
+.menu img:hover {
+    width: 20rem;
+    height: 25rem;
+  }
+.button{
+    border: none;
+    padding: 1rem 4rem;
+    font-size: 1.4rem;
+    color: white;
+    border-radius: 4rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    background:  rgb(63, 0, 113);
+    text-transform: uppercase;
+}
  
