@@ -88,8 +88,9 @@ export default class MenuItems extends Component< {}, State> {
             {this.state.menuItems.map(item => (
                 <><h2>{item.food_name}</h2> 
                 <img src={'http://localhost:3000/burgers/'+ item.food_image}></img>
+                <p>{item.food_description}</p>
                 <button onClick={(event) => this.AddToShoppingCart(item)}>Buy now</button>
-                <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
+                {/* <p>He Printing and Typesetting the industry. Lorem Ipsum has</p> */}
                 </>
             )
             )}
