@@ -55,21 +55,21 @@ export default class MenuItems extends Component< {}, State> {
     }
     
 
-    // const incrementItemQuantity = (id: number) => {
-    //     const updatedItems = this.state.Cart.map((item) =>
-    //       item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-    //     );
-    //     setItems(updatedItems);
-    //   };
+     incrementItemQuantity = (id: number) => {
+        const updatedItems = this.state.Cart.map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+         this.setState(updatedItems);
+      };
     
-    //   const decrementItemQuantity = (id: number) => {
-    //     const updatedItems = items.map((item) =>
-    //       item.id === id && item.quantity > 1
-    //         ? { ...item, quantity: item.quantity - 1 }
-    //         : item
-    //     );
-    //     setItems(updatedItems);
-    //   };
+     decrementItemQuantity = (id: number) => {
+         const updatedItems = items.map((item) =>
+          item.id === id && item.quantity > 1
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        );
+        this.setState(updatedItems);
+       };
     render(){
         return (
             <div>
@@ -79,8 +79,8 @@ export default class MenuItems extends Component< {}, State> {
                   <p>{item.menuItem.food_price} Ft</p>
                   <p>Mennyiség: {item.quantity}</p>
                   <p>Mennyiség: {item.total}</p>
-                  {/* <button onClick={() => incrementItemQuantity(item.id)}>+</button> */}
-                  {/* <button onClick={() => decrementItemQuantity(item.id)}>-</button> */}
+                  <button onClick={() => this.incrementItemQuantity(item.id)}>+</button> 
+                  <button onClick={() => this.decrementItemQuantity(item.id)}>-</button>
                   {/* => ez a LAMBDA függvény  */}
                 </div>
               ))}
