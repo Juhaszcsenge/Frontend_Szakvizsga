@@ -81,8 +81,9 @@ class Singup extends Component <{}, State> {
 
     render() {
         return(
+          <div>
+          <Header />
           <Container className="regcon">
-            <Header />
             <form className="rgbborder">
             <div className="form-box"></div>
             <h3 style={{margin:'top'}}>Sign Up</h3>
@@ -124,6 +125,7 @@ class Singup extends Component <{}, State> {
               Már regisztrált <Link to="./Login"></Link>bejelentkezik?</p>
           </form>
         </Container>
+        </div>
            
             
         )

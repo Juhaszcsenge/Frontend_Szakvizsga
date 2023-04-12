@@ -69,8 +69,9 @@ import Header from "../Comopnents/Header";
     
     render() {
         return(
-            <Container className="logcon">
-              <Header/>
+          <div>
+            <Header />
+            <Container className="logcon"> 
             <form className="rgblog">
             <div className="form-bok"></div>
             <h1>Sing in</h1>
@@ -109,6 +110,7 @@ import Header from "../Comopnents/Header";
                     
         </form>
         </Container>
+        </div>
         )
        
     }

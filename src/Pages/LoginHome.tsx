@@ -7,8 +7,8 @@ import Header from "../Comopnents/Header";
 function LoginHome() {
     return (
       <Router>
-        <Header />
         <div className="App">
+        <Header />
           <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="conatiner">
               <Link className="navbar-brand" to={"/SingUp"}>
