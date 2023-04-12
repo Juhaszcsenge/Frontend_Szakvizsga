@@ -74,38 +74,34 @@ import Header from "../Comopnents/Header";
             <Container className="logcon"> 
             <form className="rgblog">
             <div className="form-bok"></div>
-            <h1>Sing in</h1>
-            <div className="mb-3">
+            <h3 style={{margin:'top', textAlign:"center"}}>Bejelentkezés</h3>
+            <div className="input-box">
                 <label>Email cím</label>
                 <input 
                 type="email"
-                className="form-control"
-                placeholder="Enter email"
                 required value={this.state.LogEmail} onChange={e => this.setState({LogEmail: e.currentTarget.value})}
                 />
             </div>
-            <div className="mb-3">
+            <div className="input-box">
                 <label>Jelszó</label>
                 <input 
                 type="password"
-                className="form-control"
-                placeholder="Enter password" 
                 required value={this.state.LogPass} onChange={e => this.setState({LogPass: e.currentTarget.value})}/>
                 </div>
 
-                <div className="mb-3">
+                <div className="d-grid">
                     <div className="custom-control-input"
                     id="customCheck1" />
-                    <label className="custom-control-label" htmlFor="costumCheck1" style={{color:' rgb(228, 56, 228)'}}>
+                    <label className="custom-control-label" htmlFor="costumCheck1" style={{color:'rgb(153, 17, 128)'}}>
                         Emlékez rám
                     </label>
                 </div>
                 <div className="d-grid">
-                    <button type="button" onClick={this.handleLogin} style={{backgroundColor:'black', color:' rgb(228, 56, 228)'}} >Submit</button>
+                    <button type="button" onClick={this.handleLogin} style={{backgroundColor:'rgb(63, 0, 113)', color:'white'}} >Submit</button>
                 </div>
                 <p>{this.state.message}</p>
-                <p className="forgot-password text-right" style={{color:'rgb(228, 56, 228)'}}>
-                    Elfelejett <a href="#">jelszó?</a>
+                <p className="forgot-password text-right" style={{color:'white'}}>
+                    Elfelejett <a href="https://www.avast.com/random-password-generator#pc">jelszó?</a>
                 </p>
                     
         </form>

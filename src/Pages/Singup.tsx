@@ -86,7 +86,7 @@ class Singup extends Component <{}, State> {
           <Container className="regcon">
             <form className="rgbborder">
             <div className="form-box"></div>
-            <h3 style={{margin:'top'}}>Sign Up</h3>
+            <h3 style={{margin:'top'}}>Regisztráció</h3>
             <div className="input-box">
               <label>Teljes név</label>
               <input type="text" required value={this.state.singFullname} onChange={e => this.setState({singFullname: e.currentTarget.value})}  />
@@ -121,8 +121,8 @@ class Singup extends Component <{}, State> {
               </button>
               <p>{this.state.message}</p>
             </div>
-            <p className="forgot-password text-right">
-              Már regisztrált <Link to="./Login"></Link>bejelentkezik?</p>
+            <p className="forgot-password text-right" style={{color: "white"}}>  
+            <Link to="./Login"  ></Link>Bejelentkezés</p>
           </form>
         </Container>
         </div>
