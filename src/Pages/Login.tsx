@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container } from 'react-bootstrap';
 import { TokenObj } from '../token';
 import { useNavigate} from 'react-router-dom';
+import Header from "../Comopnents/Header";
 
 
     interface State {
@@ -69,6 +70,7 @@ import { useNavigate} from 'react-router-dom';
     render() {
         return(
             <Container className="logcon">
+              <Header/>
             <form className="rgblog">
             <div className="form-bok"></div>
             <h1>Sing in</h1>

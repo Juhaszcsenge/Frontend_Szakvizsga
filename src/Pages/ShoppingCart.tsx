@@ -50,26 +50,10 @@ export default class MenuItems extends Component< {}, State> {
         }) //state értékek megváltoztatása
 
     }
-    componentDidMount(): void { // lefussanak bizonyos függvényewk mikor betölt az oldal
+    componentDidMount(): void { // lefussanak bizonyos függvények mikor betölt az oldal
         this.loadData()
     }
-    
 
-     incrementItemQuantity = (id: number) => {
-        const updatedItems = this.state.Cart.map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-        );
-         this.setState(updatedItems);
-      };
-    
-     decrementItemQuantity = (id: number) => {
-         const updatedItems = items.map((item) =>
-          item.id === id && item.quantity > 1
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
-        );
-        this.setState(updatedItems);
-       };
     render(){
         return (
             <div>
@@ -79,8 +63,6 @@ export default class MenuItems extends Component< {}, State> {
                   <p>{item.menuItem.food_price} Ft</p>
                   <p>Mennyiség: {item.quantity}</p>
                   <p>Mennyiség: {item.total}</p>
-                  <button onClick={() => this.incrementItemQuantity(item.id)}>+</button> 
-                  <button onClick={() => this.decrementItemQuantity(item.id)}>-</button>
                   {/* => ez a LAMBDA függvény  */}
                 </div>
               ))}

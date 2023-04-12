@@ -2,10 +2,12 @@ import { Component } from "react";
 import { Link, Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Login from "./Login";
 import Singup from "./Singup";
+import Header from "../Comopnents/Header";
 
 function LoginHome() {
     return (
       <Router>
+        <Header />
         <div className="App">
           <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="conatiner">

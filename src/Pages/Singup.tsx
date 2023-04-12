@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { Container } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import {ResponseMess} from "../Response";
+import Header from "../Comopnents/Header";
 
 
 interface State {
@@ -81,6 +82,7 @@ class Singup extends Component <{}, State> {
     render() {
         return(
           <Container className="regcon">
+            <Header />
             <form className="rgbborder">
             <div className="form-box"></div>
             <h3 style={{margin:'top'}}>Sign Up</h3>

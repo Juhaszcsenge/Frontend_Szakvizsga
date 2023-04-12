@@ -44,7 +44,7 @@ import MenuItems from './Pages/MenuItems';
     return  <div>
       <>
       
-      <Header />
+      {/* <Header />  */}
       <Routes>
              <Route path='/' element={<Fooldal></Fooldal>}></Route>
               <Route path='/Singup' element={<Singup></Singup>}></Route>

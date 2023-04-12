@@ -1,4 +1,4 @@
-export default function dealy(milisec: number){
+export default function delay(milisec: number){
     return new Promise(resolve => {
         setTimeout(() => { resolve(' ') }, milisec)
     })

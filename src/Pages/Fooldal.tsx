@@ -8,25 +8,53 @@ import Responsive from "../Pages/Responsive"
 import '../App.css';
 import Loading from '../Loading'
 import LoadingPage from "../Comopnents/LoadingPage";
+import delay from '../Loading';
+import Header from "../Comopnents/Header";
 
 
+interface State{
+    load : boolean
+}
 
+export default class Fooldal extends Component<{}, State>{
+    constructor(props: {}) {
+        super(props)
+        this.state = { 
+            load: false
+        }
+    }
 
-export default class Fooldal extends Component{
+loading = async () =>{
+
+   await delay(3000)
+    this.setState({
+        load:true
+    })
+
+}
+
+componentDidMount(){
+    
+    this.loading()
+}
 
     render(){
-        return(
+        return(<div> { this.state.load=== true ? 
             <Container fluid>
+                <Header />
                 <div className="imgcontainer">
                     <img src="./perfect.webp" alt="" className="cover">
                     </img>
                 </div>
+
              
             <Service />
           <MenuKedvencek />
           <Contact />
           <Footer />
-        </Container>
-        )
+        </Container> : <LoadingPage/>}</div>)
+        
     }
-}
+      
+    }
+

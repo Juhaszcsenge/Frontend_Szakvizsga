@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { Container} from 'react-bootstrap';
 import Footer from "../Comopnents/Footer";
+import Header from "../Comopnents/Header";
 
 
 interface State{
@@ -74,6 +75,7 @@ export default class MenuItems extends Component< {}, State> {
     render(){
         return(
             <Container fluid>
+                <Header />
             <div className="imgcontainer">
                 <img src="background_menu.avif" alt="" className="cover2">
                 </img>
