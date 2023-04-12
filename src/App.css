@@ -5,7 +5,7 @@ html{
     font-style:normal;
 }
 body{
-    background-color: black !important;
+    background-color:  #0c1022 !important;
     position: relative;
     scroll-padding: 80px;
 }
@@ -30,8 +30,8 @@ body{
 }
 /*------------IMG-----------*/
 .cover{
-  width: 1890px;
-  height: 730px;
+  width: 100%;
+ height: 750px;
 }
 .cover2{
     height: 750px;

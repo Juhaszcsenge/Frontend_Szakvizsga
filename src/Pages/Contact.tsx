@@ -47,6 +47,7 @@ const ContactForm = () => {
             Üzenet:
             <textarea name="message" value={formState.message} onChange={handleChange} />
         </label>
+        <br />
         <button type="submit">Küldés</button>
       
     </form>

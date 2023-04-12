@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { Container} from 'react-bootstrap';
 import Footer from "../Comopnents/Footer";
 import Header from "../Comopnents/Header";
+import "bootstrap/dist/css/bootstrap.css";
 
 
 interface State{
@@ -80,26 +81,23 @@ export default class MenuItems extends Component< {}, State> {
                 <img src="background_menu.avif" alt="" className="cover2">
                 </img>
             </div>
-            <section id="menuitem">
-                <div className="h1title">
-            <h1>
-                <span style={{textAlign: "center"}}>Menü</span>            
-            </h1>
-            </div>
-            <div className="burgers">
+            <div className="menu">
             {this.state.menuItems.map(item => (
+                <div className="menus">
                 <><h2>{item.food_name}</h2> 
+                <div className="image">
                 <img src={'http://localhost:3000/burgers/'+ item.food_image}></img>
+                </div>
                 <p>{item.food_description}</p>
-                <button onClick={(event) => this.AddToShoppingCart(item)}>Buy now</button>
-                {/* <p>He Printing and Typesetting the industry. Lorem Ipsum has</p> */}
+                <button onClick={(event) => this.AddToShoppingCart(item)}>Kosárba</button>
                 </>
+                </div>
             )
             )}
             </div>
             
 
-            </section>
+            
             <Footer />
             </Container>
 

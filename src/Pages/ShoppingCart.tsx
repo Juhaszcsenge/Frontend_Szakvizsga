@@ -54,6 +54,7 @@ export default class MenuItems extends Component< {}, State> {
         this.loadData()
     }
 
+
     render(){
         return (
             <div>
@@ -64,7 +65,9 @@ export default class MenuItems extends Component< {}, State> {
                   <p>Mennyiség: {item.quantity}</p>
                   <p>Mennyiség: {item.total}</p>
                   {/* => ez a LAMBDA függvény  */}
+                  <button type="submit">Tovább a fizetéshez</button>
                 </div>
+                
               ))}
             </div>
         );
