@@ -44,7 +44,7 @@ componentDidMount(){
             <Container fluid>
                 <Header />
                 <div className="imgcontainer">
-                <img src="./perfect.webp"  alt="" className="cover"></img>
+                <img src="./perfect.webp"  alt="" className="cover"></img> {/* háttérképként megadni*/}
                 </div>
             <Service />
           <MenuKedvencek />

@@ -29,7 +29,7 @@ export default class  Header extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="ml-auto">
-                    <Nav.Link href="/Fooldal" style={{color:"white"}}>Főoldal</Nav.Link>
+                    <Nav.Link href="/" style={{color:"white"}}>Főoldal</Nav.Link>
                     <Nav.Link href="/Menu" style={{color:"white"}} >Menü</Nav.Link>
                     <NavDropdown  title="Továbbiak"  style={{color:"white"}} id="basic-nav-dropdown" >
                       <NavDropdown.Item href="/">Kosár</NavDropdown.Item>

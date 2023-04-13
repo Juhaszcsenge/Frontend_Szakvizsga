@@ -78,7 +78,7 @@ export default class MenuItems extends Component< {}, State> {
             <Container fluid>
                 <Header />
             <div className="imgcontainer">
-                <img src="background_menu.avif" alt="" className="cover2">
+                <img src="páros menü.jpg" alt="" className="cover2">
                 </img>
             </div>
             <div className="menu">
@@ -86,7 +86,7 @@ export default class MenuItems extends Component< {}, State> {
                 <div className="menus">
                 <><h2>{item.food_name}</h2> 
                 <div className="image">
-                <img src={'http://localhost:3000/burgers/'+ item.food_image}></img>
+                <img src={'http://localhost:3000/burgers/'+ item.food_image}></img> {/*boostarppel használni col-row megoldással */}
                 </div>
                 <p>{item.food_description}</p>
                 <button onClick={(event) => this.AddToShoppingCart(item)}>Kosárba</button>
