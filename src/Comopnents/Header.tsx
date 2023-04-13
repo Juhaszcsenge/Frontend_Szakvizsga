@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavDropdown, Badge } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Badge, Button } from 'react-bootstrap';
 import { Link, Route, Routes } from 'react-router-dom';
 import Singup from '../Pages/Singup';
 import { MDBNavbarLink, MDBIcon } from 'mdb-react-ui-kit';
 import {BsCart2} from 'react-icons/bs'
+import useContext from 'react';
 
 export default class  Header extends Component {
   logout = async () => {
@@ -18,8 +19,9 @@ export default class  Header extends Component {
               localStorage.removeItem('token')
               window.location.reload()
              }
+            
     }
-           
+             
   
     render(){
 
@@ -40,10 +42,13 @@ export default class  Header extends Component {
                 </Navbar.Collapse>
                 <Navbar.Collapse className='justify-content-end'>
                   <Navbar.Text>
-                    <BsCart2 href='../Pages/ShoppingCart.tsx'/>
+                    <Button variant='outline-primary'>
+                    <BsCart2 href='../Pages/Order.tsx' to='/src/Pages/Order.tsx'/>
                     <Badge pill bg="primary" style={{marginLeft: "10px"}}>
                       2
                     </Badge>
+                    </Button>
+                    
                   </Navbar.Text>
                 </Navbar.Collapse>
                 
