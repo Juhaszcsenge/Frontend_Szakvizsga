@@ -60,7 +60,7 @@ export default class MenuItems extends Component< {}, State> {
             <div>
               {this.state.Cart.map((item) => (
                 <div key={item.id}>
-                  <h2>{item.menuItem.food_name}</h2>
+                  <h2>{item.menuItem.food_name}</h2> {/*menük nevét, árát  kiírja, meg a mennyiséget és a teljes összeget is*/}
                   <p>{item.menuItem.food_price} Ft</p>
                   <p>Mennyiség: {item.quantity}</p>
                   <p>Mennyiség: {item.total}</p>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Badge } from 'react-bootstrap';
+import React, { useState, useContext } from 'react';
+import { Badge, Table } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { BsCart2 } from 'react-icons/bs';
@@ -8,7 +8,9 @@ import { BsCart2 } from 'react-icons/bs';
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true); 
+
+  
 
   return (
     <>
@@ -18,13 +20,35 @@ import { BsCart2 } from 'react-icons/bs';
                       2
                     </Badge>
       </Button>
-      <Offcanvas show={show} onHide={handleClose} {...props}>
+      <Offcanvas show={show} onHide={handleClose} placement='end' style={{backgroundColor: "black"}}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Kosár</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <Table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Ételek</th>
+                <th>Darab</th>
+                <th>Ár</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+            </tbody>
+          </Table>
         </Offcanvas.Body>
       </Offcanvas>
      

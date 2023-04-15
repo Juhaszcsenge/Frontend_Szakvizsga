@@ -43,7 +43,7 @@ export default class  Header extends Component {
                 </Navbar.Collapse>
                 <Navbar.Collapse className='justify-content-end'>
                   <Navbar.Text>
-                    <ShoppingCartCanvas key={'end'} placement={'end'} name={'end'} />
+                    <ShoppingCartCanvas/>
                     {/* <BsCart2 href='../Pages/Order.tsx' to='/src/Pages/Order.tsx'/>
                     <Badge pill bg="primary" style={{marginLeft: "10px"}}>
                       2
