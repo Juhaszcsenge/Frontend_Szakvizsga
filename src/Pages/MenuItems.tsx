@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Container} from 'react-bootstrap';
+import { Card, Container} from 'react-bootstrap';
 import Footer from "../Comopnents/Footer";
 import Header from "../Comopnents/Header";
 import "bootstrap/dist/css/bootstrap.css";
@@ -56,7 +56,7 @@ export default class MenuItems extends Component< {}, State> {
 
     AddToShoppingCart = async (menuItem: Menu)  =>  { //objektum 
         let data = {
-            quantity: 1,
+            quantity: 1, /*egyesével növeli a termékeket */
             menuItem: menuItem
         }
         let response = await fetch("http://localhost:3000/Cart",{
@@ -70,30 +70,37 @@ export default class MenuItems extends Component< {}, State> {
         console.log(menuItem)
 
     }
-
-      
+    
 
     render(){
         return(
             <Container fluid>
                 <Header />
             <div className="imgcontainer">
-                <img src="páros menü.jpg" alt="" className="cover2">
+                <img src="background_menu.avif" alt="" className="cover2">
                 </img>
             </div>
-            <div className="menu">
-            {this.state.menuItems.map(item => (
-                <div className="menus">
-                <><h2>{item.food_name}</h2> 
-                <div className="image">
-                <img src={'http://localhost:3000/burgers/'+ item.food_image}></img> {/*boostarppel használni col-row megoldással */}
+            <div className="conatiner">
+                <div className="row">
+            {this.state.menuItems.map((item, index) => (
+                <div className="col-sm-4"> {/*Kilenc képet fogunk megjeleníteni, és méretarányosakat keresünk, így működni fog jól,
+                vagy a css-el többet baszakszom, viszont így nem lehet akkor ifxen már responzív az oldal. Még ki kell találni honap.  */}
+                <>
+                <h2>{item.food_name}</h2> 
+                <div className="col-sm-6">
+                <img  src={'http://localhost:3000/burgers/' + item.food_image}/>
+                <div className="float-left">
+                <p style={{margin:"left"}}>{item.food_description}</p>
+                <p>{item.food_price}</p>
                 </div>
-                <p>{item.food_description}</p>
-                <button onClick={(event) => this.AddToShoppingCart(item)}>Kosárba</button>
+                
+                <button onClick={(event) => this.AddToShoppingCart(item)}>Kosárba</button> 
+                </div>
                 </>
-                </div>
+                </div>    
             )
             )}
+            </div>
             </div>
             
 
