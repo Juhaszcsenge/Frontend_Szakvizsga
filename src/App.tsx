@@ -14,6 +14,7 @@ import Service from './Pages/Service';
 import MenuKedvencek from './Pages/MenuKedvencek';
 import Contact from './Pages/Contact';
 import MenuItems from './Pages/MenuItems';
+import Order from './Pages/Order';
 
 
   interface State{
@@ -53,6 +54,7 @@ import MenuItems from './Pages/MenuItems';
 
               <Route path='/login' element={<Login></Login>}></Route>
               <Route path='/Menu' element={<MenuItems></MenuItems>}></Route>
+              <Route path='/Order' element={<Order></Order>}></Route>
 
           </Routes> 
       </>

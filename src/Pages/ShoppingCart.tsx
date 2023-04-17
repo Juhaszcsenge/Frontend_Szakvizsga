@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import { Container} from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import Footer from "../Comopnents/Footer";
+import { Link } from "react-router-dom";
 
 
 interface State{
@@ -41,13 +42,19 @@ export default class MenuItems extends Component< {}, State> {
     }
     
     
+      
     loadData = async () => {
-        let response = await fetch('http://localhost:3000/menu/') /* lehúzzuk az adatbázisból az adatokat*/
+        let response = await fetch('http://localhost:3000/cart',{
+            headers:{
+                'Authorization':'Bearer '+ localStorage.getItem('token'),
+        
+        }}) /* lehúzzuk az adatbázisból az adatokat*/
         let data = await response.json() as CartResponse 
         this.setState({
             Cart : data.shoppingCart,
             sumTotal: data.sumTotal
         }) //state értékek megváltoztatása
+
 
     }
     componentDidMount(): void { // lefussanak bizonyos függvények mikor betölt az oldal
@@ -57,19 +64,36 @@ export default class MenuItems extends Component< {}, State> {
 
     render(){
         return (
-            <div>
-              {this.state.Cart.map((item) => (
-                <div key={item.id}>
-                  <h2>{item.menuItem.food_name}</h2> {/*menük nevét, árát  kiírja, meg a mennyiséget és a teljes összeget is*/}
-                  <p>{item.menuItem.food_price} Ft</p>
-                  <p>Mennyiség: {item.quantity}</p>
-                  <p>Mennyiség: {item.total}</p>
-                  {/* => ez a LAMBDA függvény  */}
-                  <button type="submit">Tovább a fizetéshez</button>
-                </div>
-                
-              ))}
+            <Table>
+            {this.state.Cart.map((item) => (
+            <div key={item.id}>
+              <tr>{item.menuItem.food_name}</tr> {/*menük nevét, árát  kiírja, meg a mennyiséget és a teljes összeget is*/}
+              <tr>{item.menuItem.food_price} Ft</tr>
+              <tr>Mennyiség: {item.quantity}</tr>
+              <tr>Mennyiség: {item.total}</tr>
+              {/* => ez a LAMBDA függvény  */}
+              <Link className='btn ' to='/Order'>Tovább a fizetéshez</Link>
             </div>
+            
+          ))}
+            <thead>
+          <tr>
+            <th>Ételek</th>
+            <th></th>
+            </tr>
+            
+            <tr>
+                <th>Darab</th>
+            </tr>
+            <tr>
+                <th>Ár</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+          
+        </tbody>
+      </Table>
         );
     }
 }
