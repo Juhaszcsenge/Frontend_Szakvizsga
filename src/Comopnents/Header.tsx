@@ -27,7 +27,7 @@ export default class  Header extends Component {
     render(){
 
             return(
-              <Navbar bg="dark-p3" variant='dark' expand="lg" collapseOnSelect style={{backgroundColor: '  #0c1022'}}>
+              <Navbar bg="dark-p3" variant='dark' expand="lg" collapseOnSelect style={{backgroundColor: '#0c1022'}}>
                 <Navbar.Brand href="#home" >Burgnyik</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -48,7 +48,6 @@ export default class  Header extends Component {
                     <Badge pill bg="primary" style={{marginLeft: "10px"}}>
                       2
                     </Badge> */}
-                    
                     
                   </Navbar.Text>
                 </Navbar.Collapse>

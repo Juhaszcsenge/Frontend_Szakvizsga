@@ -454,10 +454,31 @@ input:valid ~ label{
     background:  rgb(63, 0, 113);
     text-transform: uppercase;
 }
+.conatiner{
+    padding: 70px;
+}
 
 /* ---------------HAMBURGER GIF ----------------*/ 
 
-.video-container {
+/* .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 arányhoz */
+    padding-bottom: 56.25%; /* 16:9 arányhoz 
+  } */
+  .bg-image {
+    background-image: url('/public//background_menu.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: fit-content;
+    padding-bottom: 56.25%; /* Az arány, például egy 16:9 képernyő esetén */
   }
+
+.video-container{
+    background-image: url('/public//Video.mp4');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: fit-content;
+    padding-bottom: 56.25%; 
+}
+

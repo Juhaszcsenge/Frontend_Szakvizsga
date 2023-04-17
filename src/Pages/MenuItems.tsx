@@ -76,11 +76,13 @@ export default class MenuItems extends Component< {}, State> {
         return(
             <Container fluid>
                 <Header />
-            <div className="imgcontainer">
-                <img src="background_menu.avif" alt="" className="cover2">
-                </img>
-            </div>
+             <div className="bg-image">
+                {/* <img src="background_menu.avif" alt="" className="cover2">
+                </img> */}
+            </div> 
+            <h1 style={{textAlign: "center"}}>Burgereink</h1>
             <div className="conatiner">
+                
                 <div className="row">
             {this.state.menuItems.map((item, index) => (
                 <div className="col-sm-4"> {/*Kilenc képet fogunk megjeleníteni, és méretarányosakat keresünk, így működni fog jól,

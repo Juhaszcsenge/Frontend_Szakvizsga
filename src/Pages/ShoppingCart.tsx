@@ -72,7 +72,6 @@ export default class MenuItems extends Component< {}, State> {
               <tr>Mennyiség: {item.quantity}</tr>
               <tr>Mennyiség: {item.total}</tr>
               {/* => ez a LAMBDA függvény  */}
-              <Link className='btn ' to='/Order'>Tovább a fizetéshez</Link>
             </div>
             
           ))}
@@ -91,8 +90,9 @@ export default class MenuItems extends Component< {}, State> {
         </thead>
         <tbody>
         
-          
+        <Link className='btn ' to='/Order'>Tovább a fizetéshez</Link>
         </tbody>
+
       </Table>
         );
     }
