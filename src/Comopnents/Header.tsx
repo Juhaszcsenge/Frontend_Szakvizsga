@@ -5,7 +5,7 @@ import Singup from '../Pages/Singup';
 // import { MDBNavbarLink, MDBIcon } from 'mdb-react-ui-kit';
 // import {BsCart2} from 'react-icons/bs'
 import useContext from 'react';
-import { ShoppingCartCanvas } from './CostumCard';
+import { ShoppingCartCanvas } from '../Pages/WebshoppConecting';
 
 export default class  Header extends Component {
   logout = async () => {
@@ -43,7 +43,7 @@ export default class  Header extends Component {
                 </Navbar.Collapse>
                 <Navbar.Collapse className='justify-content-end'>
                   <Navbar.Text>
-                    <ShoppingCartCanvas/>
+                    <ShoppingCartCanvas menuItems={[]}/>
                     {/* <BsCart2 href='../Pages/Order.tsx' to='/src/Pages/Order.tsx'/>
                     <Badge pill bg="primary" style={{marginLeft: "10px"}}>
                       2
