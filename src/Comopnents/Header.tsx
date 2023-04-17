@@ -27,7 +27,7 @@ export default class  Header extends Component {
     render(){
 
             return(
-              <Navbar bg="dark-p3" variant='dark' expand="lg" collapseOnSelect style={{backgroundColor: 'black'}}>
+              <Navbar bg="dark-p3" variant='dark' expand="lg" collapseOnSelect style={{backgroundColor: '  #0c1022'}}>
                 <Navbar.Brand href="#home" >Burgnyik</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

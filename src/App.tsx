@@ -10,7 +10,6 @@ import Login from './Pages/Login';
 import Singup from './Pages/Singup';
 import Fooldal from './Pages/Fooldal';
 import Carousel from './Comopnents/Carousel'
-import Service from './Pages/Service';
 import MenuKedvencek from './Pages/MenuKedvencek';
 import Contact from './Pages/Contact';
 import MenuItems from './Pages/MenuItems';

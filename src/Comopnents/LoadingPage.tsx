@@ -6,7 +6,7 @@ export default class LoadingPage extends Component {
         return  <div style={{textAlign:'center'}}>
 
         
-        <img src={hamburger} style={{backgroundColor:"#0c1022"}} alt="Loading..."/>
+        <img src={hamburger} style={{backgroundColor:"#0c1022", height:"800px"}} alt="Loading..."/>
         </div>
     }
 }

@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import { Container } from 'react-bootstrap';
-import Service from "./Service";
 import MenuKedvencek from "./MenuKedvencek";
 import Contact from "./Contact";
 import Footer from "../Comopnents/Footer";
@@ -10,6 +9,9 @@ import LoadingPage from "../Comopnents/LoadingPage";
 import delay from '../Loading';
 import Header from "../Comopnents/Header";
 import "bootstrap/dist/css/bootstrap.css";
+import ReactPlayer from 'react-player';
+
+
 
 
 
@@ -43,10 +45,21 @@ componentDidMount(){
         return(<div> { this.state.load=== true ? 
             <Container fluid>
                 <Header />
-                <div className="imgcontainer">
-                <img src="./perfect.webp"  alt="" className="cover"></img> {/* háttérképként megadni*/}
+                <div className="video-container">
+                <ReactPlayer
+                url={process.env.PUBLIC_URL + '/video.mp4'}
+                playing={true}
+                loop={true}
+                muted={true}
+                width="100%"
+                height="auto"
+                style={{ position: 'absolute', top: '0', zIndex: -1 }}
+                />
                 </div>
-            <Service />
+                
+                 {/* <div className="imgcontainer"> 
+                 <img src="./video.mp4"  alt="" className="cover"></img> 
+                 </div> */} 
           <MenuKedvencek />
           <Contact />
           <Footer />

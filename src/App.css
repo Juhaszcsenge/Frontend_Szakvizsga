@@ -62,7 +62,7 @@ body{
     padding: 0 3vw;
     border-radius: 64px;
     text-align: center;
-    padding: 70px 50px;
+    padding: 100px 50px;
     margin-top: -60px;
     background: #151515;
     margin-top: -150px;
@@ -457,3 +457,7 @@ input:valid ~ label{
 
 /* ---------------HAMBURGER GIF ----------------*/ 
 
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 arányhoz */
+  }
