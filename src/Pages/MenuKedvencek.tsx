@@ -5,7 +5,7 @@ export default  class MenuKedvencek extends Component {
     render(){
         const data = [
             {
-                image: './sajtburger.jpg',
+                image: './Pulled-Pork.jpg',
                 name: "Sajtbuger",
                 price: "2500Ft"
             },
@@ -27,7 +27,7 @@ export default  class MenuKedvencek extends Component {
 
         ];
         return(
-            <Container>
+            <Container fluid className="d-flex justify-content-center">
             <section id="menux">
                 <div className="title">
                     <h1>
@@ -43,14 +43,9 @@ export default  class MenuKedvencek extends Component {
                                     <img src={menu.image} alt="" />
                                 </div>
                                 <h2>{menu.name}</h2>
-                                <h3>{menu.price}</h3>
-                                <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
-                                <button>Buy now</button>
                             </div>
-
                         );
                     })}
-
                 </div>
             </section>
         </Container>

@@ -61,7 +61,7 @@ export function ShoppingCartCanvas({...props}) {
       </Button>
       <Offcanvas show={show} onHide={handleClose} placement="end" style={{ backgroundColor: 'black' }}>
         <Offcanvas.Header closeButton style={{color:"white"}}>
-          <Offcanvas.Title>KosÃ¡r</Offcanvas.Title>
+          <Offcanvas.Title>Kosár</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
             <ShoppingCart/>    

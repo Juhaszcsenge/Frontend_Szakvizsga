@@ -98,16 +98,16 @@ button{
 
 /*------Menu-------*/
 
-.menux{
-    display: flex;
-    grid-template-columns: repeat(3, 1fr);
+#menux{
+    display: block;
+    grid-template-columns: repeat(3);
     direction: column;
     gap: 1.5vw;
     padding: 2 10vw;
 }
 .menu {
     display: flex;
-    padding: 30px;
+    padding: 20px;
 }
 .menus{
     display: flex;
@@ -142,38 +142,9 @@ button{
     height: 20rem;
     width: 15rem;
     object-fit: cover;
-    -webkit-transition: all 2s ease;
-    -moz-transition: all 2s ease;
-    -ms-transition: all 2s ease;
-    transition: all 2s ease;
 }
-.menu img:hover {
-    width: 20rem;
-    height: 25rem;
-  }
-.button{
-    border: none;
-    padding: 1rem 4rem;
-    font-size: 1.4rem;
-    color: white;
-    border-radius: 4rem;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-    background:  rgb(63, 0, 113);
-    text-transform: uppercase;
-}
+ 
 
-@media screen and (min-width: 280px) and (max-width: 720px) {
-    .menux{
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-}
-
-@media screen and (min-width: 720px) and (max-width: 1080px) {
-    .menux {
-      grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 
 /*-------------------------------Sinup, Login--------------------------------*/
@@ -480,3 +451,44 @@ input:valid ~ label{
    
 }
 
+/*----------------Mobil applikáció-------------------*/
+
+.app_container{
+    background: #0a071A ;
+    border-radius: 10px;
+    padding: 35px 0 100px 0;
+}
+
+.app_img{
+    margin-bottom: -100px;
+    width: 300px;
+    height: auto;
+    margin-left: 50px;
+    border-radius: 40px;
+}
+
+.app_content h5{
+   color: white; 
+}
+
+.app_content p{
+    color: white; 
+ }
+ 
+
+.app_content h2{
+    color: white;
+    font-weight: 600;
+}
+
+.app_content{
+    padding-top: 50px
+}
+
+.btn_apple{
+    background: #0a071A;
+    border: none;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 5px;
+}

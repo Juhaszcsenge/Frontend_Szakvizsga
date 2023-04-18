@@ -67,9 +67,25 @@ export default class MenuItems extends Component< {}, State> {
             <Table>
             {this.state.Cart.map((item) => (
             <div key={item.id}>
-              <tr>{item.menuItem.food_name}</tr> {/*menük nevét, árát  kiírja, meg a mennyiséget és a teljes összeget is*/}
-              <tr>{item.menuItem.food_price} Ft</tr>
-              <tr>Mennyiség: {item.quantity}</tr>
+                 <tbody>
+                 <td>
+                     <tr> <img src={'http://localhost:3000/burgers/' + item.menuItem.food_image}  className="rounded-3" style={{ width: "200px" }}
+                                alt="Shopping item"></img></tr> 
+                    <tr>{item.menuItem.food_name}</tr> 
+                </td>
+
+                <td>
+                    <tr>{item.quantity}</tr>
+                </td>
+
+                <td>
+                <tr>{item.menuItem.food_price} Ft</tr>
+                </td>
+
+                 </tbody>
+             {/*menük nevét, árát  kiírja, meg a mennyiséget és a teljes összeget is*/}
+             
+             
               <tr>Mennyiség: {item.total}</tr>
               {/* => ez a LAMBDA függvény  */}
             </div>
@@ -78,20 +94,15 @@ export default class MenuItems extends Component< {}, State> {
             <thead>
           <tr>
             <th>Ételek</th>
-            <th></th>
-            </tr>
-            
-            <tr>
-                <th>Darab</th>
-            </tr>
-            <tr>
-                <th>Ár</th>
-            </tr>
+            <th>Darab</th>
+            <th>Ár</th>
+         </tr>
         </thead>
-        <tbody>
+       
+           
         
-        <Link className='btn ' to='/Order'>Tovább a fizetéshez</Link>
-        </tbody>
+        <Link className='btn ' to='/Order' style={{backgroundColor:" rgb(63, 0, 113)", color:"white"}}>Tovább a fizetéshez</Link>
+
 
       </Table>
         );

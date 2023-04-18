@@ -10,6 +10,7 @@ import delay from '../Loading';
 import Header from "../Comopnents/Header";
 import "bootstrap/dist/css/bootstrap.css";
 import ReactPlayer from 'react-player';
+import Donwload from "./Donwload";
 
 
 
@@ -59,11 +60,10 @@ componentDidMount(){
                 />
                 </div>
                 
-                 {/* <div className="imgcontainer"> 
-                 <img src="./video.mp4"  alt="" className="cover"></img> 
-                 </div> */} 
+                 
           <MenuKedvencek />
-          <Contact />
+          <Donwload/>
+          {/* <Contact /> */}
           <Footer />
         </Container> : <LoadingPage/>}</div>)
         
