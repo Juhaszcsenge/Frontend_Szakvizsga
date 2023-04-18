@@ -43,11 +43,11 @@ componentDidMount(){
 
     render(){
         return(<div> { this.state.load=== true ? 
-            <Container fluid>
+             <Container fluid>
                 <Header />
                 <div className="video-container">
                 <ReactPlayer
-                url={process.env.PUBLIC_URL + '/video.mp4'}
+                url={process.env.PUBLIC_URL + '/video2.mp4'}
                 playing={true}
                 loop={true}
                 muted={true}
