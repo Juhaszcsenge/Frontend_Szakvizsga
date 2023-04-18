@@ -52,8 +52,10 @@ componentDidMount(){
                 loop={true}
                 muted={true}
                 width="100%"
-                height="auto"
-                style={{ position: 'absolute', top: '0', zIndex: -1 }}
+                height="50%"
+                object-fit="cover"
+                filter="brightness(60%)"
+                style={{ position: 'sticky', top: '0'}}
                 />
                 </div>
                 

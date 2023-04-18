@@ -464,8 +464,7 @@ input:valid ~ label{
   } */
 
 .video-container{
-    padding-bottom: 56.25%; 
-    min-height: 100vh;
+    padding-bottom: 0%; 
    
 }
 

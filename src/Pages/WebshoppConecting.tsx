@@ -7,7 +7,7 @@ import MenuItems from './MenuItems';
 import Footer from '../Comopnents/Footer';
 import ShoppingCart from './ShoppingCart';
 
-
+let itemsCounts = 0;
 interface Menu {
   food_id: number;
   food_name: string;
@@ -15,6 +15,17 @@ interface Menu {
   food_category: string;
   food_price: number;
   food_image: string;
+}
+interface CartResponse{
+  shoppingCart : CartItems[]
+  sumTotal: string;
+}
+
+interface CartItems{
+  id: string;
+  total: number;
+  quantity: number;
+  menuItem: Menu;
 }
 
 export function ShoppingCartCanvas({...props}) {
@@ -28,8 +39,8 @@ export function ShoppingCartCanvas({...props}) {
       headers:{
         'Authorization':'Bearer '+ localStorage.getItem('token'),
     }});
-    let data = await response.json() as { menu: Menu[] };
-    setMenuItems(data.menu);
+    let data = await response.json() as CartResponse;
+    itemsCounts = data.shoppingCart.length
     console.log(data)
   };
 
@@ -45,12 +56,12 @@ export function ShoppingCartCanvas({...props}) {
      <Button variant="outline-primary" onClick={handleShow}>
         <BsCart2 href="../Pages/MenuItems.tsx" to="../Pages/MenuItems.tsx" />
         <Badge pill bg="primary" style={{ marginLeft: '10px' }}>
-          2
+          {itemsCounts}
         </Badge>
       </Button>
       <Offcanvas show={show} onHide={handleClose} placement="end" style={{ backgroundColor: 'black' }}>
         <Offcanvas.Header closeButton style={{color:"white"}}>
-          <Offcanvas.Title>Kosár</Offcanvas.Title>
+          <Offcanvas.Title>KosÃ¡r</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
             <ShoppingCart/>    
@@ -60,4 +71,3 @@ export function ShoppingCartCanvas({...props}) {
     </>
   );
 }
-
