@@ -28,7 +28,7 @@ export default class  Header extends Component {
 
             return(
               <Navbar bg="dark-p3" variant='dark' expand="lg" collapseOnSelect style={{backgroundColor: '#0c1022'}}>
-                <Navbar.Brand href="#home" >Burgnyik</Navbar.Brand>
+                <Navbar.Brand href="#home" >Étterem</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="ml-auto">
