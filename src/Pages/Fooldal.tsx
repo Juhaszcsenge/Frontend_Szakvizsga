@@ -11,6 +11,7 @@ import Header from "../Comopnents/Header";
 import "bootstrap/dist/css/bootstrap.css";
 import ReactPlayer from 'react-player';
 import Donwload from "./Donwload";
+import GoogleMaps from "./GoogleMaps";
 
 
 
@@ -64,6 +65,7 @@ componentDidMount(){
           <MenuKedvencek />
           <Donwload/>
           {/* <Contact /> */}
+          <GoogleMaps/>
           <Footer />
         </Container> : <LoadingPage/>}</div>)
         

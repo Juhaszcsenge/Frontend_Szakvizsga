@@ -76,16 +76,16 @@ import Header from "../Comopnents/Header";
             <div className="form-bok"></div>
             <h3 style={{margin:'top', textAlign:"center"}}>Bejelentkezés</h3>
             <div className="input-box">
-                <label>Email cím</label>
                 <input 
                 type="email"
+                placeholder="Email cím"
                 required value={this.state.LogEmail} onChange={e => this.setState({LogEmail: e.currentTarget.value})}
                 />
             </div>
             <div className="input-box">
-                <label>Jelszó</label>
                 <input 
                 type="password"
+                placeholder="Jelszó"
                 required value={this.state.LogPass} onChange={e => this.setState({LogPass: e.currentTarget.value})}/>
                 </div>
 

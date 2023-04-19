@@ -88,29 +88,30 @@ class Singup extends Component <{}, State> {
             <div className="form-box"></div>
             <h3 style={{margin:'top'}}>Regisztráció</h3>
             <div className="input-box">
-              <label>Teljes név</label>
-              <input type="text" required value={this.state.singFullname} onChange={e => this.setState({singFullname: e.currentTarget.value})}  />
+              <input type="text" 
+              placeholder="Teljes név"
+              required value={this.state.singFullname} onChange={e => this.setState({singFullname: e.currentTarget.value})}  />
             </div>
             <div className="input-box">
-              <label>Email cím</label>
               <input
                 type="email"
+                placeholder="Email cím"
                 required
                 value={this.state.singEmail} onChange={e => this.setState({singEmail: e.currentTarget.value})}
               />
             </div>
             <div className="input-box">
-              <label>Jelszó</label>
               <input
                 type="password"
+                placeholder="Jelszó"
                 required
                 value={this.state.singPass} onChange={e => this.setState({singPass: e.currentTarget.value})}
               />
             </div>
             <div className="input-box">
-              <label>Jelszó mégegyszer</label>
               <input
                 type="password"
+                placeholder="Jelszó mégegyszer"
                 required
                 value={this.state.singRePass} onChange={e => this.setState({singRePass: e.currentTarget.value})}
               />
@@ -119,10 +120,11 @@ class Singup extends Component <{}, State> {
               <button type="button" style={{backgroundColor:" rgb(63, 0, 113)"}}  onClick={this.handleRegister}>
                 Regisztráció
               </button>
-              <p>{this.state.message}</p>
             </div>
-            <p className="forgot-password text-right" style={{color: "white"}}>  
-            <Link to="./Login"  ></Link>Bejelentkezés</p>
+            <p>{this.state.message}</p>
+            <p className="forgot-password text-right" style={{color:'white'}}>
+              <Link className='btn 'style={{marginRight:'7px', color:"white", textAlign: "right", paddingTop: "10px"}} to='/Login'>Itt betud jelentkezni fiókjába!</Link>
+            </p>
           </form>
         </Container>
         </div>

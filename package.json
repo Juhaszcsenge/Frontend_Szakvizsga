@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
     "bootstrap": "^5.2.3",
+    "google-map-react": "^2.2.0",
     "images": "^3.2.4",
     "lottie-react": "^2.4.0",
     "mdb-react-ui-kit": "^5.1.0",
