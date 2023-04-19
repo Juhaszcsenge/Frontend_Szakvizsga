@@ -21,6 +21,19 @@ interface MenuResponse{
     menu : Menu[]
 }
 
+interface CartResponse{
+    shoppingCart : CartItems[]
+    sumTotal: string;
+}
+
+interface CartItems{
+    id: string;
+    total: number;
+    quantity: number;
+    menuItem: Menu;
+}
+
+
 export default class MenuItems extends Component< {}, State> {
     constructor(props: {}) {
         super(props)

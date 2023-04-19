@@ -468,7 +468,7 @@ input:valid ~ label{
 }
 
 .app_img{
-    margin-bottom: -100px;
+    /* margin-bottom: -100px; */
     width: 300px;
     height: auto;
     margin-left: 50px;
@@ -500,3 +500,6 @@ input:valid ~ label{
     padding: 7px 25px;
     border-radius: 5px;
 }
+/* .row{
+    padding: 35px 0 100px 0;
+} */

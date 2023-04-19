@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import { Container } from 'react-bootstrap';
 import MenuKedvencek from "./MenuKedvencek";
-import Contact from "./Contact";
 import Footer from "../Comopnents/Footer";
 import '../App.css';
 import Loading from '../Loading'
@@ -64,7 +63,6 @@ componentDidMount(){
                  
           <MenuKedvencek />
           <Donwload/>
-          {/* <Contact /> */}
           <GoogleMaps/>
           <Footer />
         </Container> : <LoadingPage/>}</div>)

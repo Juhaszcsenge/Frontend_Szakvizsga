@@ -22,7 +22,7 @@ const Donwload = () => {
                         </h2>
 
                         <button className="app_btns" style={{textAlign:"center"}}>
-                            <a href="#">Letöltés</a>
+                            <a href="https://play.google.com/store/apps?hl=hu&gl=US" style={{color:"white"}}>Letöltés</a>
                         </button>
                     </div>
                 </Col>

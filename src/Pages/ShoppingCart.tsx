@@ -76,7 +76,7 @@ export default class MenuItems extends Component< {}, State> {
             </thead>
                  <tbody>
                  <td>
-                     <tr> <img src={'http://localhost:3000/burgers/' + item.menuItem.food_image}  className="rounded-3" style={{ width: "200px" }}
+                     <tr> <img src={'http://localhost:3000/burgers/' + item.menuItem.food_image}  className="rounded-3" style={{ width: "150px" }}
                                 alt="Shopping item"></img></tr> 
                     <tr>{item.menuItem.food_name}</tr> 
                 </td>

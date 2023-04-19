@@ -5,9 +5,11 @@ import Header from "../Comopnents/Header";
 import "bootstrap/dist/css/bootstrap.css";
 
 
+
 interface State{
     menuItems: Menu[]
     token: string
+    shoppingCart: CartItems[]
 
 }
 
@@ -36,7 +38,8 @@ export default class MenuItems extends Component< {}, State> {
         super(props)
         this.state = {
             menuItems:[],
-            token: localStorage.getItem('token') || '' //iniczializálom a tokent
+            token: localStorage.getItem('token') || '',//iniczializálom a tokent
+            shoppingCart: []
 
         }
     }
@@ -53,6 +56,46 @@ export default class MenuItems extends Component< {}, State> {
     componentDidMount(): void { // lefussanak bizonyos függvényewk mikor betölt az oldal
         this.loadData()
     }
+    handleAddToCart = (menuItem: Menu) => {
+        const { shoppingCart } = this.state;
+        const { food_id } = menuItem;
+        const cartItem = shoppingCart.find((item) => item.menuItem.food_id === food_id);
+    
+        if (cartItem) {
+          const updatedShoppingCart = shoppingCart.map((item) =>
+            item.menuItem.food_id === food_id ? { ...item, quantity: item.quantity + 1 } : item
+          );
+          this.setState({ shoppingCart: updatedShoppingCart });
+        } else {
+          const newCartItem: CartItems = {
+            id: Math.random().toString(36).substr(2, 9),
+            total: menuItem.food_price,
+            quantity: 1,
+            menuItem,
+          };
+          const updatedShoppingCart = [...shoppingCart, newCartItem];
+          this.setState({ shoppingCart: updatedShoppingCart });
+        }
+      };
+    
+      handleRemoveFromCart = (menuItem: Menu) => {
+        const { shoppingCart } = this.state;
+        const { food_id } = menuItem;
+        const cartItem = shoppingCart.find((item) => item.menuItem.food_id === food_id);
+    
+        if (cartItem) {
+          if (cartItem.quantity === 1) { // ha egy darab van a kosárban, akkor eltávolítjuk a kosárból
+            const updatedShoppingCart = shoppingCart.filter((item) => item.menuItem.food_id !== food_id);
+            this.setState({ shoppingCart: updatedShoppingCart });
+          } else {
+            const updatedShoppingCart = shoppingCart.map((item) => // ha több darab van a kosárban, akkor csak a darabszámot csökkentjük
+              item.menuItem.food_id === food_id ? { ...item, quantity: item.quantity - 1 } : item
+            );
+            this.setState({ shoppingCart: updatedShoppingCart });
+          }
+        }
+      };
+    
 
     AddToShoppingCart = async (menuItem: Menu)  =>  { //objektum 
         let data = {
@@ -68,9 +111,14 @@ export default class MenuItems extends Component< {}, State> {
                 body: JSON.stringify(data),
             });
         console.log(menuItem)
-
+        const updatedShoppingCart = [...this.state.shoppingCart, {
+            id: Math.random().toString(36).substr(2, 9),
+            total: menuItem.food_price,
+            quantity: 1,
+            menuItem,
+        }];
+        this.setState({ shoppingCart: updatedShoppingCart });
     }
-    
 
     render(){
         return(
@@ -85,18 +133,20 @@ export default class MenuItems extends Component< {}, State> {
                 
                 <div className="row">
             {this.state.menuItems.map((item, index) => (
-                <div className="col-sm-4"> {/*Kilenc képet fogunk megjeleníteni, és méretarányosakat keresünk, így működni fog jól,
+                <div className="col-sm-4 d-flex justify-content-center text-center my-3"> {/*Kilenc képet fogunk megjeleníteni, és méretarányosakat keresünk, így működni fog jól,
                 vagy a css-el többet baszakszom, viszont így nem lehet akkor ifxen már responzív az oldal. Még ki kell találni honap.  */}
-                <>
-                <h2>{item.food_name}</h2> 
-                <div className="col-sm-6">
+                <> 
+                <div>
+                <h2>{item.food_name}</h2>
                 <img  src={'http://localhost:3000/burgers/' + item.food_image}/>
-                <div className="float-left">
+                <div>
                 <p style={{margin:"left"}}>{item.food_description}</p>
-                <p>{item.food_price}</p>
+                <p>{item.food_price} Ft</p>
                 </div>
                 
                 <button onClick={(event) => this.AddToShoppingCart(item)}>Kosárba</button> 
+                <button onClick={(event) => this.handleAddToCart(item)} style={{width:"30px"}}>+</button>
+                <button onClick={(event) => this.handleRemoveFromCart(item)} style={{width:"30px"}}>-</button>
                 </div>
                 </>
                 </div>    
@@ -105,13 +155,13 @@ export default class MenuItems extends Component< {}, State> {
             </div>
             </div>
             
-
-            
             <Footer />
-            </Container>
-
-            
-           
+            </Container> 
         )
     }
 }
+
+   
+    
+
+   
