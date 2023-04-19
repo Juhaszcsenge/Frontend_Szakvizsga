@@ -125,7 +125,7 @@ export default class MenuItems extends Component< {}, State> {
             <Container fluid>
                 <Header />
              <div className="bg-image">
-                <img src="background_menu.avif" alt="" className="cover2">
+                <img src="background_menu.avif" alt="" className="cover2" style={{width:"100%", height:"30%"}}>
                 </img> 
             </div> 
             <h1 style={{textAlign: "center"}}>Burgereink</h1>
