@@ -54,6 +54,7 @@ import Order from './Pages/Order';
               <Route path='/login' element={<Login></Login>}></Route>
               <Route path='/Menu' element={<MenuItems></MenuItems>}></Route>
               <Route path='/Order' element={<Order></Order>}></Route>
+              <Route path='/Fooldal' element={<Fooldal></Fooldal>}></Route>
 
           </Routes> 
       </>
