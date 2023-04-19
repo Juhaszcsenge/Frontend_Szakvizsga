@@ -116,15 +116,16 @@ class Singup extends Component <{}, State> {
                 value={this.state.singRePass} onChange={e => this.setState({singRePass: e.currentTarget.value})}
               />
             </div>
-            <div className="d-grid">
+            <div className="d-grid-s">
               <button type="button" style={{backgroundColor:" rgb(63, 0, 113)"}}  onClick={this.handleRegister}>
                 Regisztráció
               </button>
-            </div>
-            <p>{this.state.message}</p>
-            <p className="forgot-password text-right" style={{color:'white'}}>
+              <p>{this.state.message}</p>
+              <p className="forgot-password text-right" style={{color:'white'}}>
               <Link className='btn 'style={{marginRight:'7px', color:"white", textAlign: "right", paddingTop: "10px"}} to='/Login'>Itt betud jelentkezni fiókjába!</Link>
-            </p>
+              </p>
+            </div>
+           
           </form>
         </Container>
         </div>

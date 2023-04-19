@@ -67,21 +67,25 @@ export default class MenuItems extends Component< {}, State> {
             <Table>
             {this.state.Cart.map((item) => (
             <div key={item.id}>
+            <thead>
+            <tr>
+                <th>Ételek</th>
+                <th>Darab</th><br/>
+                <th>Ár</th>
+            </tr>
+            </thead>
                  <tbody>
                  <td>
                      <tr> <img src={'http://localhost:3000/burgers/' + item.menuItem.food_image}  className="rounded-3" style={{ width: "200px" }}
                                 alt="Shopping item"></img></tr> 
                     <tr>{item.menuItem.food_name}</tr> 
                 </td>
-
                 <td>
                     <tr>{item.quantity}</tr>
                 </td>
-
                 <td>
                 <tr>{item.menuItem.food_price} Ft</tr>
                 </td>
-
                  </tbody>
              {/*menük nevét, árát  kiírja, meg a mennyiséget és a teljes összeget is*/}
              
@@ -91,13 +95,7 @@ export default class MenuItems extends Component< {}, State> {
             </div>
             
           ))}
-            <thead>
-          <tr>
-            <th>Ételek</th>
-            <th>Darab</th>
-            <th>Ár</th>
-         </tr>
-        </thead>
+           
        
            
         

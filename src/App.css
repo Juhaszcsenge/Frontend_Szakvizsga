@@ -308,7 +308,7 @@ input:valid ~ label{
 .forgot-password a {
     text-align: right;
     font-size:13px;
-    padding-top: 10px;
+    padding-top: 1px;
     color: white;
     margin: 0;
 }

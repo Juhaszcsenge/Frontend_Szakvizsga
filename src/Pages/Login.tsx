@@ -90,13 +90,6 @@ import Header from "../Comopnents/Header";
                 </div>
 
                 <div className="d-grid">
-                    <div className="custom-control-input"
-                    id="customCheck1" />
-                    <label className="custom-control-label" htmlFor="costumCheck1" style={{color:'rgb(153, 17, 128)'}}>
-                        Emlékez rám
-                    </label>
-                </div>
-                <div className="d-grid">
                     <button type="button" onClick={this.handleLogin} style={{backgroundColor:'rgb(63, 0, 113)', color:'white'}} >Submit</button>
                 </div>
                 <p>{this.state.message}</p>
