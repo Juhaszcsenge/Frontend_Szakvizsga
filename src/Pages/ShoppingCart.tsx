@@ -57,10 +57,51 @@ export default class MenuItems extends Component< {}, State> {
 
 
     }
+    AddToDatabase = async (cartItem : CartItems)  =>  {
+       console.log( cartItem.menuItem.food_price)
+        let data = {
+            quantity : cartItem.quantity,
+            menuItem : cartItem.menuItem
+        }
+        if(cartItem.quantity <= 0) {
+            let response = await fetch("http://localhost:3000/cart/" + cartItem.id,{
+                method: 'DELETE',
+                headers: {
+                'Authorization': "Bearer " + localStorage.getItem('token'),
+                },
+             }); 
+             this.loadData()
+             return
+        }
+        let adat = await JSON.stringify(data)
+        let response = await fetch('http://localhost:3000/cart',{
+          method: 'PATCH',
+          headers:{
+            "Content-Type": "application/json",
+            'Authorization':'Bearer '+ localStorage.getItem('token'),
+            
+        },
+         body : adat});
+         console.log(JSON.stringify(data))
+         if(response.ok) {
+            this.loadData()
+         }
+        }
+        
     componentDidMount(): void { // lefussanak bizonyos függvények mikor betölt az oldal
         this.loadData()
     }
 
+    increasequantity = (item : CartItems) => {
+        item.quantity += 1
+        this.AddToDatabase(item)
+
+    }
+    decreasequantity = async (item : CartItems) => {
+        item.quantity -= 1
+
+        this.AddToDatabase(item)
+    }
 
     render(){
         return (
@@ -74,11 +115,13 @@ export default class MenuItems extends Component< {}, State> {
                 <th>Ár</th>
             </tr>
             </thead>
-                 <tbody>
+                 <tbody style={{border:"1px solid white"}}>
                  <td>
                      <tr> <img src={'http://localhost:3000/burgers/' + item.menuItem.food_image}  className="rounded-3" style={{ width: "150px" }}
                                 alt="Shopping item"></img></tr> 
                     <tr>{item.menuItem.food_name}</tr> 
+                    <button onClick={(event) => this.increasequantity(item)}>+</button>
+                    <button onClick={(event) => this.decreasequantity(item)}>-</button>
                 </td>
                 <td>
                     <tr>{item.quantity}</tr>

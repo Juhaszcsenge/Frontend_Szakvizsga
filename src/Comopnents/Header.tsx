@@ -10,7 +10,7 @@ import { ShoppingCartCanvas } from '../Pages/WebshoppConecting';
 export default class  Header extends Component {
   logout = async () => {
     let response = await fetch("http://localhost:3000/auth/logout",{
-                method: 'POST',
+                method: 'DELETE',
                 headers: {
                 "Content-Type": "application/json",
                 'Authorization': "Bearer " + localStorage.getItem('token'),

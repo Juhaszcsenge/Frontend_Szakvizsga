@@ -84,15 +84,22 @@ export default class MenuItems extends Component< {}, State> {
         const cartItem = shoppingCart.find((item) => item.menuItem.food_id === food_id);
     
         if (cartItem) {
-          if (cartItem.quantity === 1) { // ha egy darab van a kosárban, akkor eltávolítjuk a kosárból
+          if (cartItem.quantity === 0) { // ha egy darab van a kosárban, akkor eltávolítjuk a kosárból
             const updatedShoppingCart = shoppingCart.filter((item) => item.menuItem.food_id !== food_id);
             this.setState({ shoppingCart: updatedShoppingCart });
+            fetch('http://localhost:3000/Cart'+  cartItem.id, {
+              method :"DELETE",
+              headers: {
+                'Authorization': "Bearer " + this.state.token,
+                },
+
+            } )
           } else {
             const updatedShoppingCart = shoppingCart.map((item) => // ha több darab van a kosárban, akkor csak a darabszámot csökkentjük
               item.menuItem.food_id === food_id ? { ...item, quantity: item.quantity - 1 } : item
             );
             this.setState({ shoppingCart: updatedShoppingCart });
-          }
+          } 
         }
       };
     
@@ -111,14 +118,34 @@ export default class MenuItems extends Component< {}, State> {
                 body: JSON.stringify(data),
             });
         console.log(menuItem)
-        const updatedShoppingCart = [...this.state.shoppingCart, {
-            id: Math.random().toString(36).substr(2, 9),
-            total: menuItem.food_price,
-            quantity: 1,
-            menuItem,
-        }];
-        this.setState({ shoppingCart: updatedShoppingCart });
+        // const updatedShoppingCart = [...this.state.shoppingCart, {
+        //     id: Math.random().toString(36).substr(2, 9),
+        //     total: menuItem.food_price,
+        //     quantity: 1,
+        //     menuItem,
+        // }];
+        // this.setState({ shoppingCart: updatedShoppingCart });
     }
+
+    AddToDatabase = async (menuItem: Menu)  =>  {
+      let response = await fetch('http://localhost:3000/cart',{
+        method: 'PATCH',
+        headers:{
+          'Authorization':'Bearer '+ localStorage.getItem('token'),
+      }});
+      let data = await response.json() as CartItems;
+      }
+
+      DeleteToDatabase = async (menuItem: Menu)  =>  {
+        let response = await fetch('http://localhost:3000/cart',{
+          method: 'DELETE',
+          headers:{
+            'Authorization':'Bearer '+ localStorage.getItem('token'),
+        }});
+        let data = await response.json() as CartItems;
+        }
+  
+    
 
     render(){
         return(
@@ -159,7 +186,7 @@ export default class MenuItems extends Component< {}, State> {
             </Container> 
         )
     }
-}
+  }
 
    
     
