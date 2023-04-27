@@ -7,6 +7,7 @@ import Singup from '../Pages/Singup';
 import useContext from 'react';
 import { ShoppingCartCanvas } from '../Pages/WebshoppConecting';
 
+/**Kijelentkezés ami a bejelentkezésnél a felhasználóhoz generált tokennel azonosítja, majd törli a tokent. Az adatbázisban megmarad, így könnyen betud majd jelentkezni legközelebb.  */
 export default class  Header extends Component {
   logout = async () => {
     let response = await fetch("http://localhost:3000/auth/logout",{
@@ -23,12 +24,12 @@ export default class  Header extends Component {
             
     }
              
-  
+/**Bootsrapes Header */
     render(){
 
             return(
               <Navbar bg="dark-p3" variant='dark' expand="lg" collapseOnSelect style={{backgroundColor: '#0c1022'}}>
-                <Navbar.Brand href="#home" >Étterem</Navbar.Brand>
+                <Navbar.Brand href="#home" >BiteMe Burger</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="ml-auto">

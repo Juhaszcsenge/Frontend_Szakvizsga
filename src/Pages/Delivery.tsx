@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBBtn, MDBCard, MDBCardBody, MDBCol, MDBIcon, MDBInput, MDBRow, MDBTypography } from 'mdb-react-ui-kit';
 
+/**A szállítási adatok file, nem lett végül beimplementálva, de bootstrap segítségével lett létrehozva. A tovább fejlesztés során majd megjelenítve lesz az összegzés után a fizetés előtt. */
 export default function Delivery() {
   return (
     <>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-
+/**Mobil applikációt tájékoztató felület, hogy van mobil applikációnk, és a link a Google Play áruházba irányít át */
 const Donwload = () => {
     return (
         <Container className="app_container">

@@ -6,7 +6,9 @@ interface ContactFormState {
     email: string;
     message: string;
   }
-  
+  /**Egy térképet jelenítek meg ami az éttermünk pozítcióját mutatja meg, és ha rákattint akkor a Google Mps-et hzza be az éteremmel együtt. 
+   * Azonban tartalmaz még egy űrlapot, ahol felvehetik velünk a kapcsolatot a vendégek, és az üzenet elküldése után, az oldalon jön egy üzenet, hogy sikeresen elküldve. 
+   */
   const GoogleMaps = () => {
     const mapStyles = {
         width: '100%',

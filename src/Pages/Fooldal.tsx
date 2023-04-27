@@ -27,7 +27,7 @@ export default class Fooldal extends Component<{}, State>{
             load: false
         }
     }
-
+/**A loadingscreen megjelenítésére szolgál, hogy mennyi ideig töltsön */
 loading = async () =>{
 
    await delay(2000)
@@ -41,7 +41,9 @@ componentDidMount(){
     
     this.loading()
 }
-
+/**Fő oldalon először egy 4k videót tölt be ami automaitkusan elindul magától. 
+ * majd importálva vannak azok a tsx fájlok amiket szerettem volna megjeleníteni a főoldalon
+ */
     render(){
         return(<div> { this.state.load=== true ? 
              <Container fluid>
