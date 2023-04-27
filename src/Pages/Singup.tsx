@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {ResponseMess} from "../Response";
 import Header from "../Comopnents/Header";
 
-
+/** TypeScript interfészek, amelyek meghatározzák a kódban lévő objektumok alakját*/
 interface State {
   message: string[];
   singEmail: string;
@@ -13,7 +13,7 @@ interface State {
   singRePass: string;
 }
 
-
+/**A constructor 4db kulcsot tartalmaz és egy tömböt */
 class Singup extends Component <{}, State> {
   constructor(props: {}){
     super(props);
@@ -26,6 +26,7 @@ class Singup extends Component <{}, State> {
       singRePass: ''
     }
   }
+  /**Egy függvény ami a hibaüzenetekre van megírva. Ha a felhasználó rosszul ad meg egy adatot akkor azt hibaüzenet formájában jelezzük neki. */
     handleRegister = async () => {
        if (this.state.singFullname.trim() === ''){
         this.setState({message: ['Kérjük adja meg a teljes nevét!'] })
@@ -43,7 +44,7 @@ class Singup extends Component <{}, State> {
         this.setState({message: ['A két jelszó  nem egyezik']})
         return;
        }
-       
+       /**Console.log szintén arra szolgál itt, hogy ellenőrizzük, hogy a függvény hiba mentesen végig fut-e.  */
         console.log("mukszik?")
         const data ={
           "fullName": this.state.singFullname,
@@ -51,7 +52,12 @@ class Singup extends Component <{}, State> {
           "password": this.state.singPass,
           "repassword": this.state.singRePass
         };
-
+/**Az adatokat elküldjük a szervernek, és az általa visszaadott Promise objektumot visszaadja, amelyet a await kulcsszóval várakoztatunk, amíg a válasz meg nem érkezik. 
+ * A metódus második részében adja át az HTTP kérés részleteit.
+ *  A method kulcsszó a kérés módszerét állítja be, amely itt "POST", azaz az adatokak a kérést postolja és így jeleníti meg a szervernek.
+ *  A headers objektum az  adatküldési formátumot határozza meg (JSON). 
+ * Az body kulcsszó az adatokat adja meg, amelyeket a  kérés testében küldünk el.
+*/
         let response = await fetch("http://localhost:3000/user/register",{
           method: 'POST',
           headers: {
@@ -60,7 +66,9 @@ class Singup extends Component <{}, State> {
           body: JSON.stringify(data),
         });
         console.log(response.status)
-
+/**Ha a szerver 201-es kódot küld vissza, akkor az azt jelenti, hogy az adatok sikeresen átmentek, és ezt a 4 kulcsot megjelníti. 
+ *Ezáltal a felhasználó, kap egy üzenetet,  hogy a regisztráció sikeres volt, és az adatbázisban el lettek tárolv az adatai,
+ ha a szerver nem 201-es kódot küld vissza akkor kap egy hiba jelzést, ami azt jelenti, hogy nem volt sikeres a regisztráció.*/
         if(response.status === 201){
           this.setState({
             singFullname: '',
@@ -78,7 +86,7 @@ class Singup extends Component <{}, State> {
       
     }
   
-
+/**Regisztrációs űrlap felület megjelnítésére szolgál. */
     render() {
         return(
           <div>

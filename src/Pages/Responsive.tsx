@@ -4,7 +4,7 @@ interface Props {
   src: string;
   alt: string;
 }
-
+/**Ez is egy működö megoldás ahhoz, hogy reszponzív legyen egy oldal. Végül máshogyan lett megoldva, de a kódban hagytam, mint opcionális lehetőség. */
 const ResponsiveImage: React.FC<Props> = ({ src, alt }) => {
   return (
     <picture>
