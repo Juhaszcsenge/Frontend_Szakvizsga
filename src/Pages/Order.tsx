@@ -17,7 +17,7 @@ import {
     } from "mdb-react-ui-kit";
 import { isTemplateExpression } from "typescript";
 import { Button } from "react-bootstrap";
-
+/** TypeScript interfészek, amelyek meghatározzák a kódban lévő objektumok alakját*/
     interface State{
       Cart: CartItems[]
       sumTotal: string;
@@ -77,7 +77,7 @@ import { Button } from "react-bootstrap";
 
    
 
-
+/**Bootstrap segítségével az order felület összegzik az itemeket, képekkel, árral darabszámmal együtt. Mellete pedig egy fizetési lehetőség van megadva, ahol kiírja a teljes összeget */
     render(){
       return (
         <section className="h-100 h-custom" style={{ backgroundColor: " #0c1022" }}>

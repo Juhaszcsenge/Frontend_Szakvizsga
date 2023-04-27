@@ -3,7 +3,7 @@ import { Container, Table } from 'react-bootstrap';
 import Footer from "../Comopnents/Footer";
 import { Link } from "react-router-dom";
 
-
+/** TypeScript interfészek, amelyek meghatározzák a kódban lévő objektumok alakját*/
 interface State{
     Cart: CartItems[]
     sumTotal: string;
@@ -57,6 +57,9 @@ export default class MenuItems extends Component< {}, State> {
 
 
     }
+    /**Ha a cartItem kisebb vagy egyenlő 0-val, DELETE kérés érkezik 
+     * Ha a cartItem nagyobb, mint 0, akkor PATCH kérés érkezik
+     */
     AddToDatabase = async (cartItem : CartItems)  =>  {
        console.log( cartItem.menuItem.food_price)
         let data = {
@@ -91,7 +94,10 @@ export default class MenuItems extends Component< {}, State> {
     componentDidMount(): void { // lefussanak bizonyos függvények mikor betölt az oldal
         this.loadData()
     }
-
+/**Ezek a függvények növelik és csökkentik a kosártétel mennyiségét, és meghívják az "AddToDatabase adatbázist" , hogy az adatbázisban frissüljenek a tételek. 
+ * A increasequantity függvény egyszerűen növeli az elem mennyiségét,
+ * míg a decreasequantity függvény csökkenti az elem mennyiségét, és mind a két esetben meghívja az "AddToDatabaset". 
+ * Hogy ha az item  mennyisége nulla vagy negatív lesz, az "AddToDatabaseAddToDatabase funkció törli a tételt a kosárból és az adatbázisból. */
     increasequantity = (item : CartItems) => {
         item.quantity += 1
         this.AddToDatabase(item)

@@ -3,7 +3,7 @@ import { Link, Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Login from "./Login";
 import Singup from "./Singup";
 import Header from "../Comopnents/Header";
-
+/**Ez egy összegző oldal, ahol a Regisztrációs, és a bejelentkezős oldalt tárolom még */
 function LoginHome() {
     return (
       <Router>

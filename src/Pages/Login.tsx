@@ -24,6 +24,13 @@ import Header from "../Comopnents/Header";
             token: ''
           }
         }
+        /**
+Van egy if utasítás, amely ellenőrzi, hogy az e-mail és jelszó mezők nem üresek-e. Ha igen, hibaüzenet jelenik meg.
+Ha a mezők nem üresek, létrejön egy token, amely tartalmazza a felhasználó által megadott e-mail-címet és jelszót, ezeket mint az adatbázisban tárolja el,
+és minden egyes felhasználónak különböző tokenje van.
+A rendszer egy HTTP POST kérést küld a kiszolgálónak a ahol megjelníti a felhasználói adatokat. 
+Ha a kiszolgáló a 201-es állapotkóddal válaszol, akkor kap egy üzenete, hogy sikeres volt a bejelentkezés. 
+ a redirect felelős azért, hogy a felhasználót átirányítja a  kezdőlapra.*/
           handleLogin = async () => {
              if (this.state.LogEmail.trim()&& this.state.LogPass === ''){
               this.setState({message: ['Ne hagyja üresen a mezőket!'] })
@@ -66,7 +73,7 @@ import Header from "../Comopnents/Header";
         navigate('/Menu', {replace: true});
        }
         
-    
+    /**Bejelentkezési űrlap felület megjelnítésére szolgál. */
     render() {
         return(
           <div>
@@ -93,8 +100,8 @@ import Header from "../Comopnents/Header";
                     <button type="button" onClick={this.handleLogin} style={{backgroundColor:'rgb(63, 0, 113)', color:'white'}} >Submit</button>
                 </div>
                 <p>{this.state.message}</p>
-                <p className="forgot-password text-right" style={{color:'white'}}>
-                    Elfelejett <a href="https://www.avast.com/random-password-generator#pc">jelszó?</a>
+                <p className="forgot-password text-right" style={{color:'white'}}> 
+                    Elfelejett  <a href="https://www.avast.com/random-password-generator#pc">jelszó?</a> 
                 </p>
                     
         </form>
