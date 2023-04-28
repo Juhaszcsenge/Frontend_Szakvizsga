@@ -2,6 +2,37 @@ import React, {Component} from "react";
 import { Button, Container, Stack} from 'react-bootstrap';
 import Footer from "../Comopnents/Footer";
 
+
+interface State{
+    menuItems: Menu[]
+
+}
+
+interface Menu{
+    food_id : number;
+    food_name : string;
+    food_description : string;
+    food_category : string;
+    food_price : number;
+    food_image: string;
+}
+
+interface MenuResponse{
+    menu : Menu[]
+}
+
+interface CartResponse{
+    shoppingCart : CartItems[]
+    sumTotal: string;
+}
+
+interface CartItems{
+    id: string;
+    total: number;
+    quantity: number;
+    menuItem: Menu;
+}
+
 /**
 
 - State: 
@@ -37,36 +68,6 @@ Az osztálykomponens importálja a Footer komponenst is, amely az alkalmazás l�
 
 A MenuItems komponens segít a felhasználóknak az ételek listájának megjelenítésében, a kosárba helyezés funkcióval. 
 A fejlesztőnek át kell adnia a MenuItems komponenst a szükséges adatokkal az ételekről, majd ezt a komponenst fel kell */
-interface State{
-    menuItems: Menu[]
-
-}
-
-interface Menu{
-    food_id : number;
-    food_name : string;
-    food_description : string;
-    food_category : string;
-    food_price : number;
-    food_image: string;
-}
-
-interface MenuResponse{
-    menu : Menu[]
-}
-
-interface CartResponse{
-    shoppingCart : CartItems[]
-    sumTotal: string;
-}
-
-interface CartItems{
-    id: string;
-    total: number;
-    quantity: number;
-    menuItem: Menu;
-}
-
 
 export default class MenuItems extends Component< {}, State> {
     constructor(props: {}) {
