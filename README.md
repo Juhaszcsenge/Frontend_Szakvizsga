@@ -1,3 +1,31 @@
+ ## Leírás
+Ez a **BiteMe Burger** Applikációnk Frontendje egy szakdologozatra
+
+## Telepítés
+
+```bash
+$ npm install
+```
+
+## Az alakalmazás futtatása (olvasd el lentebb is)
+
+```bash
+# fejlesztői
+$ npm run start
+
+# Változtatások automatikus applikálása
+$ npm run start:dev
+
+# "Kulcsrakész"
+$ npm run start:prod
+```
+
+## Tesztesetek
+## Ez Backendhez kell
+<p align="left">
+ A végpontTesztek a  <a href="https://github.com/greengamerhu/VizsgaRemek_BackEnd/blob/main/thunder-collection_BiteMe_Burger_V%C3%A9gpont_tesztek_final.json" target="blank">thunder-collection_BiteMe_Burger_Végpont_tesztek_final.json</a> fájlban elérhetőek amit egy egyszerű Thunder Client-es import-al már használható is
+</p>
+ 
  ## Mielött futatnád az alkalmazást
 .env.example fájlban megtalálod az adatbázis kapcsolat beállításait ha kész vagy a beállításával akkor töröld ki a **.example**-t a fájlból
 ### .env.example
