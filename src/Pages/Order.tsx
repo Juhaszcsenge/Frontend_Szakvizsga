@@ -77,7 +77,8 @@ import { Button } from "react-bootstrap";
 
    
 
-/**Bootstrap segítségével az order felület összegzik az itemeket, képekkel, árral darabszámmal együtt. Mellete pedig egy fizetési lehetőség van megadva, ahol kiírja a teljes összeget */
+/**Bootstrap segítségével az order felület összegzik az itemeket, képekkel, árral darabszámmal együtt. 
+ * Mellete pedig egy fizetési lehetőség van megadva, ahol kiírja a teljes összeget */
     render(){
       return (
         <section className="h-100 h-custom" style={{ backgroundColor: " #0c1022" }}>

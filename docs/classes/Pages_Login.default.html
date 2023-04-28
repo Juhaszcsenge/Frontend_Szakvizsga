@@ -23,7 +23,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">default</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/829794b/src/Pages/Login.tsx#L16">src/Pages/Login.tsx:16</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/7d04a08/src/Pages/Login.tsx#L16">src/Pages/Login.tsx:16</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -77,7 +77,7 @@
 <h4 class="tsd-returns-title">Returns <a href="Pages_Login.default.html" class="tsd-signature-type tsd-kind-class">default</a></h4><aside class="tsd-sources">
 <p>Overrides Component &lt;{}, State&gt;.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/829794b/src/Pages/Login.tsx#L17">src/Pages/Login.tsx:17</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/7d04a08/src/Pages/Login.tsx#L17">src/Pages/Login.tsx:17</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="context" class="tsd-anchor"></a>
@@ -410,9 +410,16 @@ lifecycle events from running.</p>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="handleLogin.handleLogin-1"><span class="tsd-kind-call-signature">handle<wbr/>Login</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#handleLogin.handleLogin-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Van egy if utasítás, amely ellenőrzi, hogy az e-mail és jelszó mezők nem üresek-e. Ha igen, hibaüzenet jelenik meg.
+Ha a mezők nem üresek, létrejön egy token, amely tartalmazza a felhasználó által megadott e-mail-címet és jelszót, ezeket mint az adatbázisban tárolja el,
+és minden egyes felhasználónak különböző tokenje van.
+A rendszer egy HTTP POST kérést küld a kiszolgálónak a ahol megjelníti a felhasználói adatokat. 
+Ha a kiszolgáló a 201-es állapotkóddal válaszol, akkor kap egy üzenete, hogy sikeres volt a bejelentkezés. 
+ a redirect felelős azért, hogy a felhasználót átirányítja a  kezdőlapra.</p>
+</div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/829794b/src/Pages/Login.tsx#L27">src/Pages/Login.tsx:27</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/7d04a08/src/Pages/Login.tsx#L34">src/Pages/Login.tsx:34</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="redirect" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>redirect</span><a href="#redirect" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -420,16 +427,18 @@ lifecycle events from running.</p>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/829794b/src/Pages/Login.tsx#L64">src/Pages/Login.tsx:64</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/7d04a08/src/Pages/Login.tsx#L71">src/Pages/Login.tsx:71</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="render" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>render</span><a href="#render" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="render.render-1"><span class="tsd-kind-call-signature">render</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Element</span><a href="#render.render-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Bejelentkezési űrlap felület megjelnítésére szolgál.</p>
+</div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Element</span></h4><aside class="tsd-sources">
 <p>Overrides Component.render</p>
 <ul>
-<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/829794b/src/Pages/Login.tsx#L70">src/Pages/Login.tsx:70</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/Juhaszcsenge/frontend_vizsga/blob/7d04a08/src/Pages/Login.tsx#L77">src/Pages/Login.tsx:77</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setState" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>State</span><a href="#setState" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">

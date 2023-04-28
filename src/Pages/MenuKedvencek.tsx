@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
  
+/**Saját itemek létrehozása, megadva kedvenc termékeként, a főoldalon megjelenítve. */
 export default  class MenuKedvencek extends Component {
     render(){
         const data = [

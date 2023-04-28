@@ -56,6 +56,9 @@ export default class MenuItems extends Component< {}, State> {
     componentDidMount(): void { // lefussanak bizonyos függvényewk mikor betölt az oldal
         this.loadData()
     }
+    /**Ez a függvény lényegében nincs használva, de ez is azért felel, hogy a hogy az itemek darabszámát növelni, csökkenteni
+     * vagy eltávolítani lehessen. 
+      */
     handleAddToCart = (menuItem: Menu) => {
         const { shoppingCart } = this.state;
         const { food_id } = menuItem;
@@ -77,7 +80,7 @@ export default class MenuItems extends Component< {}, State> {
           this.setState({ shoppingCart: updatedShoppingCart });
         }
       };
-    
+    /**Ez a függvény azért felelne hogy az itemet véglegesen el lehessen távolítani a bevásárlókosárból. */
       handleRemoveFromCart = (menuItem: Menu) => {
         const { shoppingCart } = this.state;
         const { food_id } = menuItem;
@@ -126,7 +129,9 @@ export default class MenuItems extends Component< {}, State> {
         // }];
         // this.setState({ shoppingCart: updatedShoppingCart });
     }
-
+/**Ez a függvéyn arra szolgál, hogy nem csak a frontenden növelje az itemek darabszámát, és ne csak frontenden adja hozzá
+ * a bevásárló kosárhoz, hanem az adatbázisban jelenítse meg, magát a terméket és az ahhoz tartozó adatookat.
+ */
     AddToDatabase = async (menuItem: Menu)  =>  {
       let response = await fetch('http://localhost:3000/cart',{
         method: 'PATCH',
@@ -135,7 +140,7 @@ export default class MenuItems extends Component< {}, State> {
       }});
       let data = await response.json() as CartItems;
       }
-
+/**Ha töröljük a bevásárló kosárból akkor az adatbázisból is törlődjön az elem */
       DeleteToDatabase = async (menuItem: Menu)  =>  {
         let response = await fetch('http://localhost:3000/cart',{
           method: 'DELETE',
@@ -160,8 +165,7 @@ export default class MenuItems extends Component< {}, State> {
                 
                 <div className="row">
             {this.state.menuItems.map((item, index) => (
-                <div className="col-sm-4 d-flex justify-content-center text-center my-3"> {/*Kilenc képet fogunk megjeleníteni, és méretarányosakat keresünk, így működni fog jól,
-                vagy a css-el többet baszakszom, viszont így nem lehet akkor ifxen már responzív az oldal. Még ki kell találni honap.  */}
+                <div className="col-sm-4 d-flex justify-content-center text-center my-3"> 
                 <> 
                 <div>
                 <h2>{item.food_name}</h2>
