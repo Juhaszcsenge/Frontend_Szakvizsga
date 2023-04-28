@@ -6,6 +6,7 @@ import {
   MDBRow,
 } from 'mdb-react-ui-kit';
 
+/**Lábléc arra szolgál, hogy megejelnítse mikor készül az oldal és, hogy miylen céét szolgál. */
 export default function App() {
   return (
     <MDBFooter className='text-white text-center text-lg-left' style={{backgroundColor: "#0c1022"}}>
