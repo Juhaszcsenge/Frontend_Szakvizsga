@@ -32,18 +32,25 @@ User:
   <img src="https://github.com/greengamerhu/VizsgaRemek_BackEnd/blob/main/Final_database_structure.png"  alt="adatazisdiagram" />
 </p>
 
+## Dokumentáció
+### Fejlesztői
+A fejlesztői dokumentáció elérhető a repoban megtalálható [/docs/index.html](https://github.com/Juhaszcsenge/frontend_vizsga/blob/master/docs/index.html)
+
+
+
 ## Az alkalmazás többi része
-### Mobil
-
-[BiteMe Burger App](https://github.com/greengamerhu/Vizsgaremek_android)
-
-> Fejlesztő: [Rimóczi Dániel](https://github.com/greengamerhu) 
 
 ### Weboldal
 
 [BiteMe Burger Weboldal](https://github.com/Juhaszcsenge/frontend_vizsga)
+> Fejlesztő: [Juhász Csenge](https://github.com/Juhaszcsenge)
 
-> Fejlesztő: [Juhász Csenge](https://github.com/Juhaszcsenge) 
+
+### Mobil applikáció 
+
+[BiteMe Burger App](https://github.com/greengamerhu/Vizsgaremek_android)
+
+> Fejlesztő: [Rimóczi Dániel](https://github.com/greengamerhu)
 
 
 ### Asztali alkalmazás
