@@ -1,5 +1,5 @@
  ## Leírás
-Ez a **BiteMe Burger** Applikációnk Frontendje egy szakdologozatra
+Ez a **BiteMe Burger** Applikációnk Frontendje egy szakdolgozatra
 
 ## Telepítés
 
